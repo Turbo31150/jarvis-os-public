@@ -1,13 +1,13 @@
 % JARVIS OS — Report de présentation (livrables)
 % Dossier `demo/` · M1
-% 17/07/2026 04:01
+% 17/07/2026 09:20
 
 # Report de présentation — JARVIS OS
 
 > **Objet** : registre à jour de tous les livrables de présentation (PDF + vidéos) générés
 > dans `demo/`, prêt pour diffusion professionnelle. Chiffres d'agents **figés sur le
 > décompte vérifié** (sommes arithmétiques exactes, cf. `pack/AUDIT_COHERENCE.md`).
-> Généré automatiquement le 17/07/2026 04:01.
+> Généré automatiquement le 17/07/2026 09:20.
 
 ## 1. Décompte d'agents — chiffres officiels (vérifiés)
 
@@ -49,7 +49,7 @@ Omega Master Agents (sous-ensemble des 58).
 | `live-production-jarvis.mp4` | 2:00 | 7,1M | **Production live** — todoliste monstrueuse 18 tâches pending→done + qwen réel + voix off |
 | `montage-maitre-jarvis.mp4` | 4:22 | 15M | Montage maître (enchaînement des scènes) |
 | `scene-jarvis.mp4` | 0:48 | 40M | Scène système / agents / widget plein écran |
-| `showcase-widget.mp4` | 1:53 | 4,8M | Showcase du widget bureau |
+| `showcase-widget.mp4` | 1:21 | 3,8M | Showcase du widget bureau |
 | `live-production-jarvis.mp4` | 2:00 | 7,1M | Capture live production temps réel |
 | `jarvis-os-widget.mp4` | 0:18 | 2,8M | Boucle widget « Ce que le système fait » |
 | `intro-linux-base.mp4` | 0:17 | 908K | Intro — base Linux |
@@ -77,4 +77,4 @@ Omega Master Agents (sous-ensemble des 58).
 **Verdict** : dossier prêt pour présentation professionnelle. Chiffre à mettre en avant : **1 435 agents/composants**.
 
 ---
-*Report auto-généré — `demo/build-report.sh` · 17/07/2026 04:01*
+*Report auto-généré — `demo/build-report.sh` · 17/07/2026 09:20*
