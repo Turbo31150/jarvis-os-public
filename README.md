@@ -9,7 +9,7 @@ Infrastructure d'IA distribuée & souveraine — 100 % locale, zéro cloud, RGPD
 
 <br/>
 
-[![Site](https://img.shields.io/badge/🌐_Site-alkymia--os.netlify.app-d4af37?style=for-the-badge)](https://alkymia-os.netlify.app)
+[![Site](https://img.shields.io/badge/🌐_Site-alkymia--oss.netlify.app-d4af37?style=for-the-badge)](https://alkymia-oss.netlify.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Franck_Delmas-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/franck-delmas-80bb231b1/)
 [![YouTube](https://img.shields.io/badge/YouTube-Démo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/H6NNMm1eeDY)
 [![Email](https://img.shields.io/badge/Contact-Email-e9edf5?style=for-the-badge&logo=maildotru&logoColor=white)](mailto:franckdelmas00@gmail.com)
@@ -99,11 +99,18 @@ Trois périmètres emboîtés, pas trois valeurs concurrentes — chaque total t
 
 ## 🎬 Démonstration
 
-Le pipeline de production vidéo (captures réelles, en local) : flux, skill, scripts et artefacts.
+*Captures réelles, en production locale — pas de maquette.*
+
+<div align="center">
+
+| ▶️ Démo 1 — Présentation | ▶️ Démo 2 — Système en action |
+|:---:|:---:|
+| [<img src="https://img.youtube.com/vi/H6NNMm1eeDY/hqdefault.jpg" width="380"/>](https://youtu.be/H6NNMm1eeDY) | [<img src="https://img.youtube.com/vi/C29E64kHMtU/hqdefault.jpg" width="380"/>](https://youtu.be/C29E64kHMtU) |
+
+</div>
 
 🎞️ **Pipeline vidéo (navigable)** → [`03-demo/PIPELINE-DEMO-VIDEO.html`](03-demo/PIPELINE-DEMO-VIDEO.html)
 🗣️ **Script de narration** → [`03-demo/narration-scene-complete.txt`](03-demo/narration-scene-complete.txt)
-▶️ **YouTube** → https://youtu.be/H6NNMm1eeDY
 
 ---
 
@@ -157,7 +164,7 @@ Bases & secrets on-premise (SQLite / PostgreSQL / Redis) · bascule cloud option
 
 **Franck Delmas** — CTO & Architecte Systèmes IA · Toulouse
 
-[![Site](https://img.shields.io/badge/🌐_alkymia--os.netlify.app-d4af37?style=for-the-badge)](https://alkymia-os.netlify.app)
+[![Site](https://img.shields.io/badge/🌐_alkymia--oss.netlify.app-d4af37?style=for-the-badge)](https://alkymia-oss.netlify.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/franck-delmas-80bb231b1/)
 [![Email](https://img.shields.io/badge/franckdelmas00@gmail.com-e9edf5?style=for-the-badge&logo=maildotru&logoColor=black)](mailto:franckdelmas00@gmail.com)
 
