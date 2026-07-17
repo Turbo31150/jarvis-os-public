@@ -11,7 +11,7 @@ Infrastructure d'IA distribuée & souveraine — 100 % locale, zéro cloud, RGPD
 
 [![Site](https://img.shields.io/badge/🌐_Site-alkymia--os.netlify.app-d4af37?style=for-the-badge)](https://alkymia-os.netlify.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Franck_Delmas-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/franck-delmas-80bb231b1/)
-[![YouTube](https://img.shields.io/badge/YouTube-Démo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/H6NNMm1eeDY#-démonstration)
+[![YouTube](https://img.shields.io/badge/YouTube-Démo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/H6NNMm1eeDY)
 [![Email](https://img.shields.io/badge/Contact-Email-e9edf5?style=for-the-badge&logo=maildotru&logoColor=white)](mailto:franckdelmas00@gmail.com)
 
 <br/>
