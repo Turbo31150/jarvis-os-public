@@ -110,7 +110,11 @@ Trois périmètres emboîtés, pas trois valeurs concurrentes — chaque total t
 
 </div>
 
+**Registre vidéo complet** ([`03-demo/`](03-demo/)) — 9 vidéos dans le dépôt + 2 masters HD sur YouTube :
+short 9:16 · production live · montage maître · showcase widget · boucle widget · intro Linux · pilotage · preuve · GIF.
+
 🎞️ **Pipeline vidéo (navigable)** → [`03-demo/PIPELINE-DEMO-VIDEO.html`](03-demo/PIPELINE-DEMO-VIDEO.html)
+📄 **Report complet des livrables** → [`03-demo/REPORT_PRESENTATION.pdf`](03-demo/REPORT_PRESENTATION.pdf)
 🗣️ **Script de narration** → [`03-demo/narration-scene-complete.txt`](03-demo/narration-scene-complete.txt)
 
 ---
