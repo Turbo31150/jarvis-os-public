@@ -36,6 +36,7 @@ Infrastructure d'IA distribuée & souveraine — 100 % locale, zéro cloud, RGPD
 | 2 | [📊 Preuves & benchmarks](#-preuves--benchmarks) · [`02-preuves/`](02-preuves/) | Rapport visuel, audit de cohérence, chiffres vérifiés |
 | 3 | [🎬 Démonstration](#-démonstration) · [`03-demo/`](03-demo/) | Pipeline vidéo, narration, captures live |
 | 4 | [📚 Dossier technique](#-dossier-technique) · [`04-dossier-technique/`](04-dossier-technique/) | Pack complet, storyboard, distribution |
+| — | [🎯 Cas d'usage](#-cas-dusage) · [🧰 Stack](#-stack-technique) · [🗺️ Roadmap](#️-roadmap) · [❓ FAQ](#-faq) | |
 | — | [🧭 Architecture](#-architecture) · [🛡️ Conformité](#️-conformité--normes) · [📬 Contact](#-contact) | |
 
 ---
@@ -122,6 +123,49 @@ Trois périmètres emboîtés, pas trois valeurs concurrentes — chaque total t
 | [`STORYBOARD-COMPLET.pdf`](04-dossier-technique/STORYBOARD-COMPLET.pdf) | Storyboard chapitré (Linux → aujourd'hui) |
 | [`DISTRIBUTION-MONTAGE-IA.pdf`](04-dossier-technique/DISTRIBUTION-MONTAGE-IA.pdf) | Fiche distribution & montage IA (0-coût) |
 | [`youtube-metadata.md`](04-dossier-technique/youtube-metadata.md) | Métadonnées YouTube |
+
+---
+
+## 🎯 Cas d'usage
+
+| Secteur | Besoin | Ce que JARVIS OS apporte |
+|---|---|---|
+| 🏢 **PME / cabinet** | traiter documents & mails sans envoyer de données au cloud | IA locale RGPD, −14 h/semaine |
+| 🛒 **E-commerce** | traitement des commandes ×6 plus rapide | orchestration continue, 0 € cloud |
+| ⚖️ **Métiers réglementés** | confidentialité totale (santé, juridique, finance) | on-premise, secrets jamais externalisés |
+| 🎙️ **Accueil / support** | interface vocale locale FR | STT + TTS intégrés, < 300 ms |
+| 🧑‍💻 **Dev / freelance** | livrables techniques en secondes | scraper « catalogue → CSV » en 36 s |
+
+---
+
+## 🧰 Stack technique
+
+**Cœur** : Python 3.11 · CUDA · Docker Swarm · systemd · Redis
+**LLM** : LM Studio (qwen3.5-9b) · Ollama · cascade multi-modèles · routeur 0-token
+**Données** : SQLite · PostgreSQL · sauvegardes chiffrées horaires
+**Vocal** : Whisper CUDA (STT) · Piper / Edge-TTS (TTS)
+**Interface** : React 19 · widget bureau · dashboards web (pilotables tablette)
+
+---
+
+## 🗺️ Roadmap
+
+- [x] Hub LLM 0-token + cascade failover (LB1/LB2)
+- [x] Interprète vocal 100 % local (WER 10,51 %)
+- [x] Auto-réparation < 8 s + backups horaires
+- [x] Dossier de présentation & preuves vérifiées
+- [ ] Montée en capacité M1 (AM4 128 Go — ratio €/perf optimal)
+- [ ] Réactivation nœud calcul M2 (3× RTX4000)
+- [ ] Console d'admin tablette unifiée (dashboards épinglés)
+
+---
+
+## ❓ FAQ
+
+<details><summary><b>Mes données partent-elles dans le cloud ?</b></summary><br/>Non. Toutes les communications inter-nœuds transitent par <code>127.0.0.1</code>. La bascule cloud est optionnelle et jamais imposée.</details>
+<details><summary><b>Faut-il un matériel spécifique ?</b></summary><br/>Non. JARVIS OS s'adapte au parc existant — du smartphone au cluster 5 nœuds, sur du matériel grand public.</details>
+<details><summary><b>Suis-je verrouillé à un fournisseur d'IA ?</b></summary><br/>Non. Modèles open-source hébergés localement, compatibles avec toutes les IA. Aucun vendor lock-in.</details>
+<details><summary><b>Quel coût récurrent ?</b></summary><br/>0 € cloud, 0 token payant. Vous possédez l'infrastructure.</details>
 
 ---
 
