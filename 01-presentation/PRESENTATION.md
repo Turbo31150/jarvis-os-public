@@ -93,7 +93,7 @@ Ces chiffres sont mesurés sur mon cluster en conditions réelles :
 - **GitHub** : [github.com/Turbo31150](https://github.com/Turbo31150)
 - **Repository principal** : [jarvis-linux](https://github.com/Turbo31150/jarvis-linux)
 - **LinkedIn** : [Franck Delmas](https://www.linkedin.com/in/franck-delmas-80bb231b1/)
-- **Email** : miningexpert31@gmail.com
+- **Email** : franckdelmas00@gmail.com
 
 ---
 

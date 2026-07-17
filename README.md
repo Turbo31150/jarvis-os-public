@@ -11,8 +11,8 @@ Infrastructure d'IA distribuée & souveraine — 100 % locale, zéro cloud, RGPD
 
 [![Site](https://img.shields.io/badge/🌐_Site-alkymia--os.netlify.app-d4af37?style=for-the-badge)](https://alkymia-os.netlify.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Franck_Delmas-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/franck-delmas-80bb231b1/)
-[![YouTube](https://img.shields.io/badge/YouTube-Démo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](#-démonstration)
-[![Email](https://img.shields.io/badge/Contact-Email-e9edf5?style=for-the-badge&logo=maildotru&logoColor=white)](mailto:miningexpert31@gmail.com)
+[![YouTube](https://img.shields.io/badge/YouTube-Démo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/H6NNMm1eeDY#-démonstration)
+[![Email](https://img.shields.io/badge/Contact-Email-e9edf5?style=for-the-badge&logo=maildotru&logoColor=white)](mailto:franckdelmas00@gmail.com)
 
 <br/>
 
@@ -103,7 +103,7 @@ Le pipeline de production vidéo (captures réelles, en local) : flux, skill, sc
 
 🎞️ **Pipeline vidéo (navigable)** → [`03-demo/PIPELINE-DEMO-VIDEO.html`](03-demo/PIPELINE-DEMO-VIDEO.html)
 🗣️ **Script de narration** → [`03-demo/narration-scene-complete.txt`](03-demo/narration-scene-complete.txt)
-▶️ **YouTube** → *lien bientôt disponible*
+▶️ **YouTube** → https://youtu.be/H6NNMm1eeDY
 
 ---
 
@@ -159,7 +159,7 @@ Bases & secrets on-premise (SQLite / PostgreSQL / Redis) · bascule cloud option
 
 [![Site](https://img.shields.io/badge/🌐_alkymia--os.netlify.app-d4af37?style=for-the-badge)](https://alkymia-os.netlify.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/franck-delmas-80bb231b1/)
-[![Email](https://img.shields.io/badge/miningexpert31@gmail.com-e9edf5?style=for-the-badge&logo=maildotru&logoColor=black)](mailto:miningexpert31@gmail.com)
+[![Email](https://img.shields.io/badge/franckdelmas00@gmail.com-e9edf5?style=for-the-badge&logo=maildotru&logoColor=black)](mailto:franckdelmas00@gmail.com)
 
 <br/>
 
