@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Franck Delmas — Architecte IA & Systèmes · Portfolio complet</title>
+<style>
+  :root{--bg:#0a0e14;--card:#121821;--line:#1e2733;--txt:#e6edf3;--mut:#8b97a6;--acc:#3fb950;--acc2:#58a6ff;--acc3:#d29922;--rouge:#f85149}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:0}
+  .wrap{max-width:1100px;margin:0 auto;padding:32px 20px 80px}
+  header{border-bottom:2px solid var(--acc);padding-bottom:24px;margin-bottom:32px}
+  h1{font-size:32px;font-weight:800;letter-spacing:-.5px}
+  .sub{color:var(--acc2);font-size:18px;font-weight:600;margin-top:4px}
+  .tag{color:var(--mut);margin-top:10px;font-size:14px}
+  .tag a{color:var(--acc2);text-decoration:none}
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:24px 0}
+  .m{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .m b{display:block;font-size:26px;color:var(--acc);font-weight:800;line-height:1.1}
+  .m span{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+  h2{font-size:21px;margin:38px 0 8px;color:var(--acc3);border-left:3px solid var(--acc3);padding-left:12px}
+  .lead{color:var(--mut);margin-bottom:16px;max-width:780px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+  .proj{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;transition:.15s}
+  .proj:hover{border-color:var(--acc2)}
+  .proj h3{font-size:15px;color:var(--acc2);margin-bottom:6px}
+  .proj p{color:var(--mut);font-size:13.5px}
+  .proj .stk{margin-top:8px}
+  .chip{display:inline-block;background:#1c2530;border:1px solid var(--line);color:var(--mut);font-size:11px;padding:2px 8px;border-radius:20px;margin:2px 3px 0 0}
+  .skills{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px}
+  .sk{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13px}
+  .sk b{color:var(--acc)}
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:720px){.twocol{grid-template-columns:1fr}}
+  ul.acc{list-style:none;margin-top:8px}
+  ul.acc li{padding:6px 0 6px 22px;position:relative;color:var(--txt);font-size:14px;border-bottom:1px solid var(--line)}
+  ul.acc li:before{content:"▹";position:absolute;left:0;color:var(--acc)}
+  ul.acc li b{color:var(--acc2)}
+  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;text-align:center}
+  .pitch{background:linear-gradient(135deg,#10213a,#0d1117);border:1px solid var(--acc2);border-radius:12px;padding:22px;margin:8px 0 4px}
+  .pitch p{font-size:16px;color:var(--txt)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Franck Delmas</h1>
+  <div class="sub">Architecte IA &amp; Systèmes distribués · Créateur de JARVIS OS · Fondateur ALKYMIA</div>
+  <div class="tag">Toulouse · Autodidacte production-first · IA 100% locale &amp; souveraine · RGPD natif · 0€ cloud<br>
+  <a href="https://jarvis-delmas.netlify.app">jarvis-delmas.netlify.app</a> ·
+  <a href="https://github.com/Turbo31150">github.com/Turbo31150</a> ·
+  <a href="https://alkymia-oss.netlify.app">alkymia-oss.netlify.app</a> · franckdelmas00@gmail.com</div>
+</header>
+
+<div style="background:#0d1117;border:1px solid var(--acc3);border-radius:10px;padding:14px 18px;margin-bottom:14px">
+  <span style="color:var(--acc3);font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:12px">À l'attention d'un recruteur / d'une startup</span>
+  <p style="margin-top:6px;color:var(--txt)">Présentation de candidature — ce document résume, preuves à l'appui (144 dépôts publics et privés),
+  une infrastructure d'IA distribuée conçue et exploitée de bout en bout par une seule personne. Objectif :
+  vous montrer concrètement ce que je peux apporter à votre équipe, dès le premier jour.</p>
+</div>
+
+<div class="pitch">
+  <p><b>En une phrase —</b> Je conçois et opère seul une infrastructure d'IA distribuée de qualité production :
+  un cluster GPU multi-machines on-premise qui fait tourner des centaines d'agents autonomes, du LLM local au
+  pipeline vocal temps réel, sans aucune dépendance cloud, avec conformité RGPD par conception. Du noyau système
+  (kernel, systemd, réseau, GPU) jusqu'au produit livré (SaaS, sites, automatisations commerciales).</p>
+  <p style="margin-top:10px;color:var(--mut)"><b style="color:var(--acc)">Ce que j'apporte à une startup —</b>
+  un profil full-stack rare qui couvre l'infra, le ML/LLM Ops et le produit : capacité à monter une stack IA
+  souveraine from scratch, à livrer vite en autonomie totale, et à réduire à zéro les coûts d'inférence cloud.
+  Mentalité « production d'abord » : ce qui est montré ici tourne réellement.</p>
+</div>
+
+<div class="metrics">
+  <div class="m"><b>144</b><span>dépôts GitHub</span></div>
+  <div class="m"><b>5 nœuds</b><span>cluster GPU on-premise</span></div>
+  <div class="m"><b>12 GPU</b><span>~68 Go VRAM</span></div>
+  <div class="m"><b>900+</b><span>agents autonomes</span></div>
+  <div class="m"><b>88+</b><span>handlers MCP</span></div>
+  <div class="m"><b>0 €</b><span>coût cloud LLM</span></div>
+</div>
+
+<h2>Profil &amp; valeur</h2>
+<p class="lead">Autodidacte, je couvre toute la chaîne — administration Linux bas niveau, orchestration multi-GPU,
+ingénierie LLM (routage, distillation, consensus multi-modèles), développement full-stack et livraison commerciale.
+Spécialité : transformer du matériel hétérogène en plateforme IA souveraine, résiliente et auto-réparante,
+puis en faire des produits vendables. Je travaille en production d'abord : ce qui est livré tourne réellement.</p>
+
+<div class="skills">
+  <div class="sk"><b>Infra/DevOps</b> · Linux, systemd, Docker/Swarm, SSHFS mesh, Wake-on-LAN, watchdogs, PBO/tuning kernel, iptables</div>
+  <div class="sk"><b>GPU/LLM</b> · LM Studio, Ollama, llama.cpp, CUDA, Whisper, load-balancing, failover, distillation Claude→qwen3</div>
+  <div class="sk"><b>Agents/MCP</b> · Model Context Protocol, multi-agent consensus, OpenClaw, n8n, Claude Code, agent SDK</div>
+  <div class="sk"><b>Backend</b> · Python 3.12 (61 dépôts), FastAPI async, SQLite distribué, PostgreSQL, Redis</div>
+  <div class="sk"><b>Front/Web</b> · React 19, TypeScript, HTML/CSS, Netlify/Vercel, sites &amp; tunnels de vente</div>
+  <div class="sk"><b>Voix</b> · STT/TTS &lt;300 ms, Whisper large-v3 + distil-fr, wake word, push-to-talk, pipeline agentic</div>
+  <div class="sk"><b>Trading quant</b> · MEXC Futures, backtests MIF2, arbitrage statistique, MT5, signaux multi-LLM</div>
+  <div class="sk"><b>Sécurité/RGPD</b> · on-premise, HDS, FALC/accessibilité, audit secrets, hardening, FranceConnect+</div>
+</div>
+
+<h2>Ce qui me différencie — Linux standard vs JARVIS OS</h2>
+<p class="lead">La plupart des développeurs <b>utilisent</b> leur système d'exploitation. Moi, j'ai transformé le mien.
+JARVIS OS, c'est mon Linux modifié au niveau le plus bas (kernel, systemd, GPU, réseau) puis augmenté en
+<b>OS agentique qui produit</b>. Ce n'est pas un logiciel que je lance : c'est le levier qui me permet, seul,
+de livrer à la cadence d'une équipe. <b>C'est lui qui me permet de produire.</b></p>
+
+<table style="width:100%;border-collapse:collapse;margin:8px 0 4px;font-size:14px">
+  <thead><tr style="text-align:left;color:var(--acc3)">
+    <th style="padding:10px;border-bottom:2px solid var(--acc3)">Critère</th>
+    <th style="padding:10px;border-bottom:2px solid var(--acc3)">Poste Linux classique</th>
+    <th style="padding:10px;border-bottom:2px solid var(--acc3)">JARVIS OS — le mien</th>
+  </tr></thead>
+  <tbody style="color:var(--txt)">
+    <tr><td style="padding:10px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Modifiabilité</td><td style="padding:10px;border-bottom:1px solid var(--line);color:var(--mut)">Applications par-dessus l'OS, config locale</td><td style="padding:10px;border-bottom:1px solid var(--line)">Contrôle total kernel→systemd→GPU→agents, versionné par machine, reproductible</td></tr>
+    <tr><td style="padding:10px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Performance</td><td style="padding:10px;border-bottom:1px solid var(--line);color:var(--mut)">Ressources d'une seule machine, statiques</td><td style="padding:10px;border-bottom:1px solid var(--line)">Cluster 12 GPU mutualisé, routage LLM dynamique, distillation Claude→local, <b>0€ inférence</b></td></tr>
+    <tr><td style="padding:10px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Intégration</td><td style="padding:10px;border-bottom:1px solid var(--line);color:var(--mut)">Outils séparés, branchés à la main</td><td style="padding:10px;border-bottom:1px solid var(--line)">88+ MCP, 900+ agents, voix, navigateur, n8n, SQL distribué — <b>unifiés en un système</b></td></tr>
+    <tr><td style="padding:10px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Autonomie</td><td style="padding:10px;border-bottom:1px solid var(--line);color:var(--mut)">Tout en manuel, supervision constante</td><td style="padding:10px;border-bottom:1px solid var(--line)">Agents autonomes auto-réparants, dispatch multi-machine, actions zero-token</td></tr>
+    <tr><td style="padding:10px;color:var(--acc2);font-weight:600">Ce que ça produit</td><td style="padding:10px;color:var(--mut)">Projets ponctuels</td><td style="padding:10px"><b style="color:var(--acc)">144 dépôts livrés en solo</b> — PassCerfa, ALKYMIA, TradeOracle, sites en production</td></tr>
+  </tbody>
+</table>
+
+<p class="lead" style="margin-top:16px"><b style="color:var(--acc)">Tout ce que JARVIS OS intègre &amp; fait, en un seul système :</b></p>
+<div class="skills">
+  <div class="sk"><b>LLM local multi-modèles</b> · qwen3.5, deepseek-r1 + distillations Claude Opus, routage &amp; failover auto</div>
+  <div class="sk"><b>900+ agents MCP</b> · orchestration, consensus multi-modèles, agent SDK</div>
+  <div class="sk"><b>Voix temps réel</b> · STT/TTS &lt;300 ms, wake word, push-to-talk</div>
+  <div class="sk"><b>Automatisation web</b> · navigateur piloté (CDP), capture DOM, actions zero-token</div>
+  <div class="sk"><b>Workflows</b> · n8n, OpenClaw, cascades déterministes</div>
+  <div class="sk"><b>Données</b> · SQLite distribué + mémoire, backups chiffrés GitHub-LFS</div>
+  <div class="sk"><b>Publication</b> · omnichannel 5 réseaux (IG/Threads/TikTok/YouTube/LinkedIn)</div>
+  <div class="sk"><b>Résilience</b> · self-healing, Wake-on-LAN, watchdogs, durcissement boot</div>
+</div>
+<div class="pitch" style="margin-top:14px">
+  <p><b>Mon différenciateur en une ligne —</b> je n'apporte pas qu'un savoir-faire : j'apporte une <b>plateforme
+  qui le démultiplie</b>. Donnez-moi du matériel hétérogène, j'en fais une usine IA souveraine qui livre.</p>
+</div>
+
+<h2>Capacité de production — moi + JARVIS OS vs un freelance classique</h2>
+<p class="lead">Un recruteur compare souvent des profils à compétences égales. La vraie différence ici n'est pas
+seulement le savoir-faire : c'est la <b>plateforme de production</b> qui l'accompagne. Voici le détail concret.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:13.5px">
+  <thead><tr style="text-align:left;color:var(--acc3)">
+    <th style="padding:9px;border-bottom:2px solid var(--acc3)">Dimension</th>
+    <th style="padding:9px;border-bottom:2px solid var(--acc3)">Freelance classique</th>
+    <th style="padding:9px;border-bottom:2px solid var(--acc3)">Moi + JARVIS OS</th>
+  </tr></thead>
+  <tbody style="color:var(--txt)">
+    <tr><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Vitesse de livraison</td><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--mut)">1 tâche à la fois, à la main</td><td style="padding:9px;border-bottom:1px solid var(--line)">Pipeline multi-agents parallèle (research→code→test→doc→publish)</td></tr>
+    <tr><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Coût IA</td><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--mut)">Abonnements cloud ChatGPT/Claude/API (récurrent)</td><td style="padding:9px;border-bottom:1px solid var(--line)"><b style="color:var(--acc)">0 €</b> — cluster LLM local, distillations Claude</td></tr>
+    <tr><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Disponibilité</td><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--mut)">Heures ouvrées</td><td style="padding:9px;border-bottom:1px solid var(--line)">Agents autonomes 24/7 + auto-réparation</td></tr>
+    <tr><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Puissance de calcul</td><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--mut)">1 ordinateur</td><td style="padding:9px;border-bottom:1px solid var(--line)"><b>10 GPU · ~74 Go VRAM · 32 threads · 123 Go RAM</b></td></tr>
+    <tr><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Volume produit</td><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--mut)">Quelques projets</td><td style="padding:9px;border-bottom:1px solid var(--line)"><b style="color:var(--acc)">144 dépôts livrés en solo</b></td></tr>
+    <tr><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Confidentialité</td><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--mut)">Données envoyées à des tiers</td><td style="padding:9px;border-bottom:1px solid var(--line)">100% on-premise, RGPD/HDS par conception</td></tr>
+    <tr><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Polyvalence</td><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--mut)">Une spécialité</td><td style="padding:9px;border-bottom:1px solid var(--line)">Infra + LLM Ops + produit + voix + trading</td></tr>
+    <tr><td style="padding:9px;color:var(--acc2);font-weight:600">Scalabilité</td><td style="padding:9px;color:var(--mut)">Sous-traiter / embaucher</td><td style="padding:9px">Ajouter un nœud au cluster (heures, pas semaines)</td></tr>
+  </tbody>
+</table>
+
+<h2>Preuve empirique — un vrai cas freelance, chronométré</h2>
+<p class="lead">Plutôt que des promesses : un test réel reproductible. Prestation type vendue sur Fiverr/Upwork
+(« scraper Python → CSV »), exécutée à l'identique via JARVIS OS, mesurée.</p>
+<table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:13.5px">
+  <thead><tr style="text-align:left;color:var(--acc3)">
+    <th style="padding:9px;border-bottom:2px solid var(--acc3)">Critère</th>
+    <th style="padding:9px;border-bottom:2px solid var(--acc3)">Freelance classique</th>
+    <th style="padding:9px;border-bottom:2px solid var(--acc3)">Moi + JARVIS OS</th>
+  </tr></thead>
+  <tbody style="color:var(--txt)">
+    <tr><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Temps</td><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--mut)">~2 h · livraison 1–2 jours</td><td style="padding:9px;border-bottom:1px solid var(--line)"><b style="color:var(--acc)">36 secondes</b></td></tr>
+    <tr><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Coût</td><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--mut)">$25–60 (Fiverr/Upwork)</td><td style="padding:9px;border-bottom:1px solid var(--line)"><b style="color:var(--acc)">0 €</b></td></tr>
+    <tr><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">Qualité</td><td style="padding:9px;border-bottom:1px solid var(--line);color:var(--mut)">variable, livraisons partielles fréquentes</td><td style="padding:9px;border-bottom:1px solid var(--line)"><b>1000/1000 lignes</b>, CSV complet 4 champs</td></tr>
+    <tr><td style="padding:9px;color:var(--acc2);font-weight:600">Reproductibilité</td><td style="padding:9px;color:var(--mut)">refacturé à chaque run</td><td style="padding:9px">script réutilisable, relançable à volonté</td></tr>
+  </tbody>
+</table>
+<p class="lead" style="font-size:13px">Preuve (code + CSV) :
+<a href="https://github.com/Turbo31150/jarvis-core/tree/master/benchmark_freelance" style="color:var(--acc2)">github.com/Turbo31150/jarvis-core/benchmark_freelance</a> ·
+cible publique <a href="https://books.toscrape.com" style="color:var(--acc2)">books.toscrape.com</a></p>
+
+<h2>Détail du cluster de production (matériel réel)</h2>
+<table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:13px">
+  <thead><tr style="text-align:left;color:var(--acc3)">
+    <th style="padding:8px;border-bottom:2px solid var(--acc3)">Machine</th>
+    <th style="padding:8px;border-bottom:2px solid var(--acc3)">Matériel</th>
+    <th style="padding:8px;border-bottom:2px solid var(--acc3)">Rôle &amp; tâche</th>
+  </tr></thead>
+  <tbody style="color:var(--txt)">
+    <tr><td style="padding:8px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">M1 — Leader</td><td style="padding:8px;border-bottom:1px solid var(--line);color:var(--mut)">Ryzen 7 5700X3D 16t · 46 Go · 5 GPU ~40 Go VRAM</td><td style="padding:8px;border-bottom:1px solid var(--line)">Inférence principale + orchestration agents</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">M2 — Reasoning</td><td style="padding:8px;border-bottom:1px solid var(--line);color:var(--mut)">Xeon W-2123 8t · 46 Go · 3× Quadro RTX 4000 (24 Go)</td><td style="padding:8px;border-bottom:1px solid var(--line)">Raisonnement lourd + failover M1</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid var(--line);color:var(--acc2);font-weight:600">M5-OMEGA</td><td style="padding:8px;border-bottom:1px solid var(--line);color:var(--mut)">Xeon W-2123 8t · 31 Go · 1660S + 1050 Ti (10 Go)</td><td style="padding:8px;border-bottom:1px solid var(--line)">Interface / relais / backups (sert aussi M3)</td></tr>
+    <tr><td style="padding:8px;color:var(--acc2);font-weight:600">M4</td><td style="padding:8px;color:var(--mut)">ASUS TUF Gaming F15 (Windows 11)</td><td style="padding:8px">Intégration cross-OS</td></tr>
+  </tbody>
+</table>
+<p class="lead" style="margin-top:4px;font-size:13px">Total cluster : <b>10 GPU · ~74 Go VRAM · 32 threads · ~123 Go RAM</b> — inférence multi-modèles parallèle, 0€ cloud, failover automatique.</p>
+
+<h2>JARVIS OS — Infrastructure IA distribuée (projet phare)</h2>
+<p class="lead">Système d'exploitation agentique on-premise : un cluster de 5 machines (M1–M5, 12 GPU) orchestré par
+des centaines d'agents spécialisés, 100% LLM local, auto-réparant, conçu comme alternative souveraine aux suites cloud.</p>
+<div class="grid">
+  <div class="proj"><h3>jarvis-core / jarvis-os-public</h3><p>Noyau de l'infrastructure : cluster 5 nœuds, 10–12 GPU, 68 Go VRAM, 900+ agents, LLM local, souveraineté RGPD native.</p><div class="stk"><span class="chip">Python</span><span class="chip">CUDA</span><span class="chip">systemd</span></div></div>
+  <div class="proj"><h3>jarvis-cowork</h3><p>Espace de travail agentique : 249 agents · 86 skills · MCP-native · Claude Code · OpenClaw · n8n · on-premise RGPD.</p><div class="stk"><span class="chip">MCP</span><span class="chip">n8n</span><span class="chip">agents</span></div></div>
+  <div class="proj"><h3>jarvis-cluster</h3><p>Cluster GPU multi-nœuds : LM Studio + Ollama, load-balancing, failover auto, qwen3.5/deepseek-r1, distillations Claude Opus on-premise.</p><div class="stk"><span class="chip">LM Studio</span><span class="chip">Ollama</span><span class="chip">failover</span></div></div>
+  <div class="proj"><h3>jarvis-mcp-toolkit</h3><p>88+ handlers Model Context Protocol, cluster 6-GPU, agents autonomes, framework Python 3.12.</p><div class="stk"><span class="chip">MCP</span><span class="chip">framework</span></div></div>
+  <div class="proj"><h3>jarvis-zero-token</h3><p>Actions pré-enregistrées : 65 patterns, 0 token LLM, cascade autonome — capture HTML/balises, dispatcher déterministe.</p><div class="stk"><span class="chip">0-token</span><span class="chip">cascade</span></div></div>
+  <div class="proj"><h3>jarvis-browser-mcp</h3><p>Dual DevTools Protocol Chrome+Comet, injection DOM, zero-reload, 18 actions d'automatisation web.</p><div class="stk"><span class="chip">CDP</span><span class="chip">DOM</span></div></div>
+  <div class="proj"><h3>jarvis-agent-sdk</h3><p>SDK Python pour agents composites multi-LLM : scoring, consensus, protocole MCP, essaims d'agents autonomes.</p><div class="stk"><span class="chip">SDK</span><span class="chip">consensus</span></div></div>
+  <div class="proj"><h3>jarvis-agentic-ops</h3><p>Orchestrateur d'infrastructure auto-réparant avec consensus multi-agents (self-healing).</p><div class="stk"><span class="chip">SRE</span><span class="chip">self-heal</span></div></div>
+  <div class="proj"><h3>jarvis-orchestrator-v12</h3><p>Étoile v12.4 : 928 agents, 504 endpoints, 10 Legions, inférence multi-GPU (archive de référence).</p><div class="stk"><span class="chip">orchestration</span></div></div>
+</div>
+
+<h2>Architecture distribuée — un OS que je modifie et pilote en entier</h2>
+<p class="lead">Origine : migration complète d'un orchestrateur Windows (JARVIS v12.4) vers une infrastructure
+<b>Linux native</b>, reconstruite pour être souveraine, modifiable de bout en bout et pilotable à distance.
+Chaque machine du cluster est à la fois nœud de calcul, relais et poste de commande : depuis n'importe laquelle,
+un agent ou une IA peut agir sur toutes les autres — elles se réveillent, se partagent et se réparent entre elles.</p>
+
+<div class="grid">
+  <div class="proj"><h3>M1 — Leader (6 GPU)</h3><p>Nœud principal d'inférence : qwen3.5, deepseek-r1, distillations Claude Opus, embeddings. Orchestration des agents et du routage LLM.</p><div class="stk"><span class="chip">Ubuntu</span><span class="chip">6 GPU</span><span class="chip">LM Studio</span></div></div>
+  <div class="proj"><h3>M2 — Reasoning</h3><p>Nœud de raisonnement : deepseek-r1, qwen3.5-35b. Failover et délestage de charge depuis M1.</p><div class="stk"><span class="chip">Ubuntu</span><span class="chip">reasoning</span></div></div>
+  <div class="proj"><h3>M3 / M4 — Backup &amp; Windows</h3><p>M3 : Ollama backup (gemma3, deepseek-r1). M4 : nœud Windows 11 d'intégration (LM Studio GUI).</p><div class="stk"><span class="chip">Ollama</span><span class="chip">Windows</span></div></div>
+  <div class="proj"><h3>M5 — Interface / Relais</h3><p>Nœud d'interface CPU léger : relais Ollama, point d'entrée, miroir de sauvegarde.</p><div class="stk"><span class="chip">relais</span><span class="chip">backup</span></div></div>
+</div>
+
+<div class="skills" style="margin-top:14px">
+  <div class="sk"><b>Partage complet de fichiers</b> — maillage SSHFS bidirectionnel (M1↔M2↔M5) : chaque machine monte le système de fichiers des autres, accès admin, persistant au login. Documents accessibles partout.</div>
+  <div class="sk"><b>Action à distance par agent/IA</b> — dispatcher LLM unifié + MCP : une requête sur n'importe quel nœud route vers le meilleur backend (local GPU, cluster, agents OpenClaw) et exécute des actions système distantes.</div>
+  <div class="sk"><b>Fédération &amp; auto-réveil</b> — Wake-on-LAN + maillage AnyDesk (auto-accept, écran noir privé) : toute machine peut booter/réveiller une autre, prendre la main, relancer un service.</div>
+  <div class="sk"><b>Auto-réparation cluster</b> — timer self-heal : détecte services en échec, montages morts, pairs hors-ligne (réveil WoL) et rafraîchit le registre de compétences cross-machine.</div>
+  <div class="sk"><b>Skills cross-machine</b> — bibliothèque de compétences/agents synchronisée via le mesh : M1 (38) · M2 (17) · M5 (14), routage SSH GitOps source-of-truth.</div>
+  <div class="sk"><b>Tout modifiable</b> — du kernel et de systemd jusqu'aux agents et aux sites : configuration sous contrôle de version par machine (dépôts privés M1/M2/M3/M4/M5), reproductible.</div>
+</div>
+
+<h2>ALKYMIA — Suite de produits IA (~22 dépôts)</h2>
+<p class="lead">Gamme de produits IA verticaux issus de l'infrastructure JARVIS, conçus comme briques commercialisables :
+santé, voix, finance, data, sécurité — chacun en local-first / zero-cloud.</p>
+<div class="grid">
+  <div class="proj"><h3>ALKYMIA Aria</h3><p>Plateforme multi-agents de gestion de trésorerie · évaluation du risque IA · consensus multi-modèles.</p></div>
+  <div class="proj"><h3>ALKYMIA Phanesis / Athanor</h3><p>Transcription temps réel multilingue (50+ langues), Whisper large-v3, React 19, TTS, auto-traduction.</p></div>
+  <div class="proj"><h3>ALKYMIA Pneuma / Quintessence</h3><p>Assistant vocal local STT/PTT, distil-large-v3 CUDA, push-to-talk, injection texte curseur, pipeline voix complet.</p></div>
+  <div class="proj"><h3>ALKYMIA HealthConsensus / Healthcare</h3><p>Aide à la décision médicale multi-IA, intake STT + diagnostic LLM + rapport médecin, conformité HDS/RGPD.</p></div>
+  <div class="proj"><h3>ALKYMIA AgentAuth</h3><p>Orchestration multi-agents sécurisée, Auth0 Token Vault, sécurité IA.</p></div>
+  <div class="proj"><h3>ALKYMIA Monad</h3><p>Bundle IA portable cluster : STT + LLM + TTS + PTT, multi-machines M1/M2/M4/M5.</p></div>
+  <div class="proj"><h3>ALKYMIA Ops / Splunk</h3><p>Plateforme d'opérations autonomes 5 agents, monitoring IA, infrastructure self-healing, intelligence opérationnelle.</p></div>
+  <div class="proj"><h3>ALKYMIA SemanticGraph / DataPipeline</h3><p>Graphe sémantique multi-LLM, knowledge graph IA + pipeline data science autonome multi-agents (ETL intelligent).</p></div>
+  <div class="proj"><h3>ALKYMIA Medo</h3><p>IA conversationnelle santé mentale, suivi bien-être, thérapie assistée.</p></div>
+</div>
+
+<h2>Service public &amp; accessibilité administrative</h2>
+<p class="lead">Produits à impact social : démarches administratives françaises pré-remplies, accessibles aux personnes
+en situation de handicap (visuel, moteur, cognitif, dys, illectronisme), via IA locale et APIs gratuites.</p>
+<div class="grid">
+  <div class="proj"><h3>PassCerfa (app + site)</h3><p>Assistance administrative IA, FranceConnect+, multi-agent, FALC. 30 démarches couvertes, accessibilité dys/visuel/cognitif.</p><div class="stk"><span class="chip">FranceConnect+</span><span class="chip">FALC</span><span class="chip">React</span></div></div>
+  <div class="proj"><h3>service-aide-automatisation</h3><p>Plateforme d'assistance aux démarches admin FR, accessible handicap, APIs LLM gratuites, RGPD natif.</p><div class="stk"><span class="chip">RGPD</span><span class="chip">accessibilité</span></div></div>
+  <div class="proj"><h3>Soorce_facture / ATSD</h3><p>SaaS facturation électronique 2026 : Django + Next.js + Factur-X + PDP OAuth2, mise en conformité.</p><div class="stk"><span class="chip">Django</span><span class="chip">Factur-X</span></div></div>
+</div>
+
+<h2>Voix &amp; transcription temps réel</h2>
+<div class="grid">
+  <div class="proj"><h3>jarvis-whisper-flow</h3><p>STT/TTS on-premise &lt;300 ms, Whisper large-v3 + distil français, wake word — alternative souveraine à Deepgram/AssemblyAI.</p><div class="stk"><span class="chip">Whisper</span><span class="chip">&lt;300ms</span></div></div>
+  <div class="proj"><h3>transcription-multi-langue</h3><p>Pipeline Whisper optimisé 50+ langues, TypeScript.</p></div>
+  <div class="proj"><h3>gemini-live-trading-agent</h3><p>Assistant vocal de trading temps réel, analyse + exécution crypto mains-libres (Gemini API Competition).</p></div>
+</div>
+
+<h2>Trading quantitatif &amp; fintech (~25 dépôts)</h2>
+<p class="lead">Longue R&amp;D en trading algorithmique : pipelines multi-modèles, consensus multi-IA, anti-biais, backtests
+auditables, intégration MEXC Futures live et MetaTrader 5.</p>
+<div class="grid">
+  <div class="proj"><h3>TradeOracle</h3><p>Trading IA on-premise souverain : signaux crypto temps réel, backtests auditables MIF2, agents multi-LLM Claude/qwen3 distillés — alternative Bloomberg Terminal pour PME.</p><div class="stk"><span class="chip">MIF2</span><span class="chip">multi-LLM</span></div></div>
+  <div class="proj"><h3>tradingviewMaison</h3><p>Clone TradingView local : orderbook MEXC Futures live, détection des murs de baleines, alertes sonores.</p></div>
+  <div class="proj"><h3>StratMT5</h3><p>Indicateur de pairs trading MetaTrader 5 — arbitrage statistique (MQL5).</p></div>
+  <div class="proj"><h3>TradeOracle-Nexus-Elastic</h3><p>Intelligence financière Elasticsearch, backtesting Monte-Carlo, analytics multi-stratégies, sync MEXC temps réel.</p></div>
+  <div class="proj"><h3>telegram-bot-trading</h3><p>Système de trading automatisé complet avec alertes Telegram (v5.0).</p></div>
+  <div class="proj"><h3>Suite trading-ai-*</h3><p>~18 itérations : consensus multi-IA (LM Studio×3 + Gemini + Perplexity), app Electron autonome, pipelines CQ anti-biais, workflows n8n MEXC.</p></div>
+</div>
+
+<h2>Automatisation commerciale &amp; freelance</h2>
+<div class="grid">
+  <div class="proj"><h3>ai-freelance-automation</h3><p>Automatisation freelance IA : prospection LinkedIn, génération de devis, suivi clients par agents.</p></div>
+  <div class="proj"><h3>whatsapp-prospection-ia-autonome</h3><p>Infrastructure WhatsApp + agent IA autonome de prospection sortante (audit &amp; business plan client).</p></div>
+  <div class="proj"><h3>jarvis-content-pipeline</h3><p>Pipeline contenu : research → dispatch multi-LLM → scoring → publication 5 réseaux (Mirra + JARVIS-CDP), conçu en TDD.</p></div>
+  <div class="proj"><h3>github-social-automation</h3><p>Automatisation sociale GitHub : engagement, stars, PRs, scoring de visibilité, bot Telegram.</p></div>
+  <div class="proj"><h3>babysmart / BABYSITTER-PRO</h3><p>Plateformes clé-en-main : matching intelligent, planification automatisée, workflows n8n + OpenClaw.</p></div>
+</div>
+
+<h2>Open source &amp; communauté</h2>
+<div class="grid">
+  <div class="proj"><h3>awesome-local-ai</h3><p>Liste curatée d'outils IA 100% locaux (LLM, embeddings, voix, vision) — zéro dépendance cloud.</p></div>
+  <div class="proj"><h3>bibliotheque-prompts-multi-ia</h3><p>200+ prompts production Claude/ChatGPT/Gemini/Mistral, open source.</p></div>
+  <div class="proj"><h3>Contributions / forks techniques</h3><p>Travail sur whisper, llama.cpp, vscode, json-schema, openvsx — maîtrise des briques bas niveau de l'écosystème IA.</p></div>
+  <div class="proj"><h3>Hackathons</h3><p>Orion (credit scoring), FIND EVIL (cybersécurité &lt;1s), Aria Challenge, Ernie, MNEE, Gemini API, Hex 2026.</p></div>
+</div>
+
+<h2>Réalisations techniques marquantes</h2>
+<ul class="acc">
+  <li><b>Cluster auto-réparant</b> — orchestration M1/M2/M5 avec Wake-on-LAN, watchdogs et récupération automatique ; stabilisation LM Studio sous charge (socat, Xvfb headless, TTL/keepalive).</li>
+  <li><b>Résolution de pannes GPU bas niveau</b> — diagnostic multi-crash (GSP, ASPM ASMedia, llama.cpp ngl), power-limits par carte, isolation matérielle.</li>
+  <li><b>Distillation Claude Opus → modèles locaux</b> — qualité quasi-équivalente sur tâches de code/raisonnement à 0 token facturé.</li>
+  <li><b>Protocole zero-token 3 couches</b> — capture de balises HTML pré-enregistrées + dispatcher déterministe + navigation multi-réseaux, automatisation sans appel LLM.</li>
+  <li><b>Consolidation données distribuées</b> — 103 bases SQLite → 73, dédup 113k→21k, synchronisation cross-machine, backups GitHub-LFS chiffrés.</li>
+  <li><b>Publication omnichannel</b> — pipeline automatisé Instagram/Threads/TikTok/YouTube + LinkedIn via MCP et automatisation navigateur.</li>
+  <li><b>Sécurité</b> — patchs d'injection SQL, anti-SSRF, anti path-traversal, hardening SSH, audit de secrets, rotation de clés API.</li>
+</ul>
+
+<h2>Modalités de collaboration</h2>
+<div class="twocol">
+  <div>
+    <h3 style="color:var(--acc2);margin-bottom:6px">Freelance / Prestation</h3>
+    <ul class="acc">
+      <li>Mise en place de <b>clusters LLM locaux</b> souverains (RGPD, zéro cloud).</li>
+      <li>Architecture <b>multi-agents &amp; MCP</b>, intégration Claude Code / n8n / OpenClaw.</li>
+      <li><b>Pipelines vocaux</b> STT/TTS temps réel sur site.</li>
+      <li>Automatisation <b>métier &amp; commerciale</b> (prospection, contenu, facturation 2026).</li>
+      <li><b>Trading quantitatif</b> &amp; outillage data/fintech.</li>
+    </ul>
+  </div>
+  <div>
+    <h3 style="color:var(--acc2);margin-bottom:6px">Postes recherchés</h3>
+    <ul class="acc">
+      <li><b>Architecte IA / LLM Ops</b> — infrastructure d'inférence on-premise.</li>
+      <li><b>Ingénieur ML/IA infrastructure</b> — multi-GPU, MLOps, agents.</li>
+      <li><b>DevOps / SRE IA</b> — systèmes auto-réparants, observabilité.</li>
+      <li><b>Lead technique produit IA</b> — du prototype à la livraison.</li>
+      <li>Atouts : autonomie totale, full-stack, <b>production-first</b>, souveraineté &amp; conformité.</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  Franck Delmas · Toulouse · Architecte IA &amp; Systèmes distribués · Créateur JARVIS OS · Fondateur ALKYMIA<br>
+  144 dépôts · cluster 12 GPU · 900+ agents · 100% local · 0€ cloud · RGPD natif<br>
+  <a href="https://github.com/Turbo31150" style="color:var(--acc2)">github.com/Turbo31150</a> ·
+  <a href="https://jarvis-delmas.netlify.app" style="color:var(--acc2)">jarvis-delmas.netlify.app</a> ·
+  franckdelmas00@gmail.com · Document généré depuis l'inventaire SQL + GitHub réel (2026-06-09)
+</footer>
+
+</div>
+</body>
+</html>

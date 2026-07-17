@@ -36,6 +36,7 @@ Infrastructure d'IA distribuée & souveraine — 100 % locale, zéro cloud, RGPD
 | 2 | [📊 Preuves & benchmarks](#-preuves--benchmarks) · [`02-preuves/`](02-preuves/) | Rapport visuel, audit de cohérence, chiffres vérifiés |
 | 3 | [🎬 Démonstration](#-démonstration) · [`03-demo/`](03-demo/) | Pipeline vidéo, narration, captures live |
 | 4 | [📚 Dossier technique](#-dossier-technique) · [`04-dossier-technique/`](04-dossier-technique/) | Pack complet, storyboard, distribution |
+| 5 | [👤 CV & Portfolio](#-cv--portfolio) · [`05-cv-portfolio/`](05-cv-portfolio/) | CV Franck Delmas, portfolio projets |
 | — | [🎯 Cas d'usage](#-cas-dusage) · [🧰 Stack](#-stack-technique) · [🗺️ Roadmap](#️-roadmap) · [❓ FAQ](#-faq) | |
 | — | [🧭 Architecture](#-architecture) · [🛡️ Conformité](#️-conformité--normes) · [📬 Contact](#-contact) | |
 
@@ -170,6 +171,13 @@ short 9:16 · production live · montage maître · showcase widget · boucle wi
 <details><summary><b>Faut-il un matériel spécifique ?</b></summary><br/>Non. JARVIS OS s'adapte au parc existant — du smartphone au cluster 5 nœuds, sur du matériel grand public.</details>
 <details><summary><b>Suis-je verrouillé à un fournisseur d'IA ?</b></summary><br/>Non. Modèles open-source hébergés localement, compatibles avec toutes les IA. Aucun vendor lock-in.</details>
 <details><summary><b>Quel coût récurrent ?</b></summary><br/>0 € cloud, 0 token payant. Vous possédez l'infrastructure.</details>
+
+---
+
+## 👤 CV & Portfolio
+
+📄 **CV** → [`05-cv-portfolio/cv-franck-delmas.pdf`](05-cv-portfolio/cv-franck-delmas.pdf) · [HTML](05-cv-portfolio/cv-franck-delmas.html)
+🎨 **Portfolio** → [`05-cv-portfolio/portfolio-franck-delmas.html`](05-cv-portfolio/portfolio-franck-delmas.html)
 
 ---
 
