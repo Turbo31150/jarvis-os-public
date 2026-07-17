@@ -14,6 +14,7 @@
 
 | Fichier | Format | Rôle |
 |---|---|---|
+| [`rapport-visuel.html`](rapport-visuel.html) | HTML | **Rapport visuel pro** — graphiques audit &amp; benchmarks (fiabilité 99,6 %, triade agents, thermique GPU, statut cohérence) |
 | [`REPORT_PRESENTATION.md`](REPORT_PRESENTATION.md) | Markdown | Report de présentation — registre à jour de tous les livrables (PDF + vidéos), chiffres d'agents vérifiés |
 | [`REPORT_PRESENTATION.pdf`](REPORT_PRESENTATION.pdf) | PDF (72K) | Version PDF diffusable du report |
 | [`REPORT_PRESENTATION.html`](REPORT_PRESENTATION.html) | HTML | Version web autonome du report |

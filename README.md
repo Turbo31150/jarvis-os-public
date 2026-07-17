@@ -244,6 +244,7 @@ Le dossier [`demo/`](demo/) rassemble les **livrables de présentation** (captur
 production, en local) : report de présentation (Markdown / PDF / HTML), documentation du pipeline
 vidéo, et script de narration.
 
+- 📊 [Rapport visuel — Audit &amp; Benchmarks](demo/rapport-visuel.html) — graphiques (fiabilité, agents, thermique GPU, audit de cohérence)
 - 📄 [Report de présentation](demo/REPORT_PRESENTATION.md) — registre à jour de tous les livrables + chiffres d'agents vérifiés
 - 🎬 [Pipeline vidéo](demo/PIPELINE-DEMO-VIDEO.html) — flux, skill, scripts, artefacts
 - 🗣️ [Narration](demo/narration-scene-complete.txt) — voix off française (edge-tts)
