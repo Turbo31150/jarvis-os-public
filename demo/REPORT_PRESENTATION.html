@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Dossier demo/ · M1" />
+  <title>JARVIS OS — Report de présentation</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">@page { size: A4; margin: 2cm 1.8cm; }
+body { font-family: "DejaVu Sans","Segoe UI",sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1a1a2e; max-width: 820px; margin: auto; }
+h1 { color: #0b7285; border-bottom: 3px solid #0b7285; padding-bottom: 6px; }
+h1:first-of-type { font-size: 26pt; border: none; }
+h2 { color: #12657a; border-bottom: 1px solid #cde; padding-bottom: 3px; margin-top: 1.4em; }
+h3 { color: #1864ab; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 9.5pt; }
+th { background: #0b7285; color: #fff; text-align: left; padding: 6px 9px; }
+td { border: 1px solid #d0d7de; padding: 5px 9px; }
+tr:nth-child(even) td { background: #f3f8fa; }
+code { background: #eef2f5; padding: 1px 4px; border-radius: 3px; font-size: 9pt; }
+blockquote { border-left: 4px solid #f59f00; background: #fff9db; margin: 12px 0; padding: 8px 14px; color: #664d03; }
+strong { color: #0b3d52; }
+hr { border: none; border-top: 1px solid #cde; margin: 1.5em 0; }
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">JARVIS OS — Report de présentation</h1>
+<p class="author">Dossier <code>demo/</code> · M1</p>
+<p class="date">17/07/2026 04:01</p>
+</header>
+<h1 id="report-de-présentation-jarvis-os">Report de présentation —
+JARVIS OS</h1>
+<blockquote>
+<p><strong>Objet</strong> : registre à jour de tous les livrables de
+présentation (PDF + vidéos) générés dans <code>demo/</code>, prêt pour
+diffusion professionnelle. Chiffres d’agents <strong>figés sur le
+décompte vérifié</strong> (sommes arithmétiques exactes,
+cf. <code>pack/AUDIT_COHERENCE.md</code>). Généré automatiquement le
+17/07/2026 04:01.</p>
+</blockquote>
+<h2 id="décompte-dagents-chiffres-officiels-vérifiés">1. Décompte
+d’agents — chiffres officiels (vérifiés)</h2>
+<p>Le nombre d’agents est une <strong>triade emboîtée</strong> de
+périmètres, pas trois valeurs concurrentes. Chaque total est traçable en
+une commande.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Chiffre</th>
+<th>Périmètre</th>
+<th>Source vérifiable</th>
+<th>Somme</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>961</strong></td>
+<td>Agents indexés (cœur cowork)</td>
+<td><code>jarvis-cowork/agent-index.json</code></td>
+<td>848 + 82 + 28 + 3 = <strong>961</strong> ✔</td>
+</tr>
+<tr class="even">
+<td><strong>1 354</strong></td>
+<td>Toutes couches (entreprise)</td>
+<td>consolidation registres</td>
+<td>961 + 58 + 71 + 169 + 95 = <strong>1 354</strong> ✔</td>
+</tr>
+<tr class="odd">
+<td><strong>1 435</strong></td>
+<td>Inventaire OMEGA (le plus large)</td>
+<td><code>inventaire-complet-1435-agents.md</code></td>
+<td>11 catégories = <strong>1 435</strong> ✔</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Façade Claude Code</strong> : <strong>129</strong> agents
+chargés en session M1 (natifs + plugins) ; le strict
+<code>~/.claude/agents/*.md</code> = <strong>58</strong> fichiers
+(sous-ensemble retenu dans le 1 354). Le <strong>6</strong> = Omega
+Master Agents (sous-ensemble des 58).</p>
+<blockquote>
+<p>⚠️ <strong>À ne jamais utiliser comme fait</strong> : « 928 » (=
+capacité de parallélisme, slogan <code>jarvis-linux</code>) et « 900+ »
+(badge écosystème global). Réservés à l’annexe transparence. Chiffre
+<em>headline</em> recommandé : <strong>« jusqu’à 1 435 agents /
+composants »</strong>.</p>
+</blockquote>
+<h2 id="livrables-pdf">2. Livrables PDF</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fichier</th>
+<th>Taille</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>pack/PACK_PRESENTATION.pdf</code></td>
+<td>212K</td>
+<td>Dossier de présentation complet (6 sections : archi, benchmarks,
+hardware, widget, écosystème agents)</td>
+</tr>
+<tr class="even">
+<td><code>pack/AUDIT_COHERENCE.pdf</code></td>
+<td>88K</td>
+<td><strong>Audit de cohérence des chiffres</strong> (agents
+961/1354/1435, GPU/VRAM, thermique) — traçabilité des corrections</td>
+</tr>
+<tr class="odd">
+<td><code>pack/DISTRIBUTION-MONTAGE-IA.pdf</code></td>
+<td>92K</td>
+<td><strong>Fiche distribution &amp; montage IA</strong> (AI Studio/Veo,
+Gemini, NotebookLM) — workflow 0-coût + formats par réseau</td>
+</tr>
+<tr class="even">
+<td><code>pack/STORYBOARD-COMPLET.pdf</code></td>
+<td>40K</td>
+<td>Storyboard chapitré base Linux → aujourd’hui (9 chapitres +
+narrations)</td>
+</tr>
+<tr class="odd">
+<td><code>PIPELINE-DEMO-VIDEO.pdf</code></td>
+<td>108K</td>
+<td>Documentation du pipeline vidéo (flux, skill, scripts,
+artefacts)</td>
+</tr>
+<tr class="even">
+<td><code>REPORT_PRESENTATION.pdf</code></td>
+<td>72K</td>
+<td>Ce report (registre des livrables) — auto-généré</td>
+</tr>
+<tr class="odd">
+<td><code>pack/PACK_PRESENTATION.html</code></td>
+<td>68K</td>
+<td>Version HTML autonome du dossier (embed-resources)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="livrables-vidéo-versions-canoniques">3. Livrables vidéo
+(versions canoniques)</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fichier</th>
+<th>Durée</th>
+<th>Taille</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>presentation-complete-jarvis.mp4</code></td>
+<td>7:36</td>
+<td>59M</td>
+<td><strong>Master</strong> — présentation complète narrée (intro Linux
+→ système → widget → pilotage → production live monstrueuse →
+dossier)</td>
+</tr>
+<tr class="even">
+<td><code>short-jarvis-916.mp4</code></td>
+<td>0:52</td>
+<td>1,8M</td>
+<td><strong>Short 9:16</strong> vertical (Shorts/Reels/TikTok) — hook +
+widget live + titres</td>
+</tr>
+<tr class="odd">
+<td><code>live-production-jarvis.mp4</code></td>
+<td>2:00</td>
+<td>7,1M</td>
+<td><strong>Production live</strong> — todoliste monstrueuse 18 tâches
+pending→done + qwen réel + voix off</td>
+</tr>
+<tr class="even">
+<td><code>montage-maitre-jarvis.mp4</code></td>
+<td>4:22</td>
+<td>15M</td>
+<td>Montage maître (enchaînement des scènes)</td>
+</tr>
+<tr class="odd">
+<td><code>scene-jarvis.mp4</code></td>
+<td>0:48</td>
+<td>40M</td>
+<td>Scène système / agents / widget plein écran</td>
+</tr>
+<tr class="even">
+<td><code>showcase-widget.mp4</code></td>
+<td>1:53</td>
+<td>4,8M</td>
+<td>Showcase du widget bureau</td>
+</tr>
+<tr class="odd">
+<td><code>live-production-jarvis.mp4</code></td>
+<td>2:00</td>
+<td>7,1M</td>
+<td>Capture live production temps réel</td>
+</tr>
+<tr class="even">
+<td><code>jarvis-os-widget.mp4</code></td>
+<td>0:18</td>
+<td>2,8M</td>
+<td>Boucle widget « Ce que le système fait »</td>
+</tr>
+<tr class="odd">
+<td><code>intro-linux-base.mp4</code></td>
+<td>0:17</td>
+<td>908K</td>
+<td>Intro — base Linux</td>
+</tr>
+<tr class="even">
+<td><code>pack/pilote-widget.mp4</code></td>
+<td>0:53</td>
+<td>2,7M</td>
+<td>Pilotage guidé du widget</td>
+</tr>
+<tr class="odd">
+<td><code>pack/preuve-widget-pack.mp4</code></td>
+<td>1:31</td>
+<td>2,3M</td>
+<td>Preuve de fonctionnement widget</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Format court réseaux</strong> :
+<code>jarvis-os-widget.gif</code> (boucle) + narrations
+<code>narration-*.mp3</code> / <code>.txt</code> (voix off française,
+edge-tts).</p>
+<h2 id="documents-daccompagnement">4. Documents d’accompagnement</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Fichier</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>pack/AUDIT_COHERENCE.md</code></td>
+<td>16K</td>
+</tr>
+<tr class="even">
+<td><code>pack/youtube-metadata.md</code></td>
+<td>8,0K</td>
+</tr>
+<tr class="odd">
+<td><code>PIPELINE-DEMO-VIDEO.html</code></td>
+<td>16K</td>
+</tr>
+</tbody>
+</table>
+<h2 id="statut-cohérence">5. Statut cohérence</h2>
+<ul>
+<li>✅ Triade <strong>961 / 1 354 / 1 435</strong> cohérente et
+arithmétiquement exacte dans tout le pack.</li>
+<li>✅ <strong>129 vs 58</strong> réconciliés (façade session vs
+<code>.md</code> stricts) — section 5 + annexe.</li>
+<li>✅ <strong>928</strong> relégué à l’annexe « chiffres à réconcilier
+(transparence) », plus présenté comme fait.</li>
+<li>✅ GPU/VRAM, thermique, benchmarks (4 413 appels, 99,6 %, WER 10,51
+%, 51 tok/s…) constants.</li>
+</ul>
+<p><strong>Verdict</strong> : dossier prêt pour présentation
+professionnelle. Chiffre à mettre en avant : <strong>1 435
+agents/composants</strong>.</p>
+<hr />
+<p><em>Report auto-généré — <code>demo/build-report.sh</code> ·
+17/07/2026 04:01</em></p>
+</body>
+</html>

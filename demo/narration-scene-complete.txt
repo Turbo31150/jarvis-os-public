@@ -1,0 +1,11 @@
+JARVIS OS. Un système d'exploitation autonome, conçu, développé et opéré sur une seule machine.
+Ce que vous voyez n'est pas une maquette. C'est la production réelle, capturée en direct.
+À droite, le centre de contrôle. La file de tâches s'alimente d'elle-même. Plus de soixante actions en attente, deux cent soixante et onze déjà accomplies, chacune tracée, chacune vérifiable.
+Cahier des charges, protocole de capture, narration, montage, audit, publication. Chaque étape est une tâche, orchestrée automatiquement.
+Au centre, LM Studio sert le modèle qwen trois point cinq, neuf milliards de paramètres, entièrement en local. Soixante routes traitées, zéro repli, une réponse en une seconde environ.
+Neuf cent soixante et un agents indexés. Mille trois cent cinquante-quatre sur l'ensemble des couches. Mille quatre cent trente-cinq dans l'écosystème complet.
+Une bibliothèque vivante de dix-huit mille six cent vingt-sept blocs d'action, prêts à l'emploi.
+Soixante-dix workflows orchestrent la production, dont cinquante-six en service permanent.
+Quatre processeurs graphiques, sous surveillance thermique continue.
+Et pas un seul jeton facturé. Modèles locaux, cascade de secours, souveraineté totale des données.
+JARVIS OS. L'intelligence artificielle qui travaille pour vous, sans relâche, et sans compromis.

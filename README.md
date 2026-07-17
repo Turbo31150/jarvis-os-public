@@ -238,6 +238,18 @@ make install               # Détection matériel + activation agents
 
 ---
 
+## Présentation & Démo
+
+Le dossier [`demo/`](demo/) rassemble les **livrables de présentation** (captures réelles de
+production, en local) : report de présentation (Markdown / PDF / HTML), documentation du pipeline
+vidéo, et script de narration.
+
+- 📄 [Report de présentation](demo/REPORT_PRESENTATION.md) — registre à jour de tous les livrables + chiffres d'agents vérifiés
+- 🎬 [Pipeline vidéo](demo/PIPELINE-DEMO-VIDEO.html) — flux, skill, scripts, artefacts
+- 🗣️ [Narration](demo/narration-scene-complete.txt) — voix off française (edge-tts)
+
+---
+
 ## Structure du Projet
 
 ```

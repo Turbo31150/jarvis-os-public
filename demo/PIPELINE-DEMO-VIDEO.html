@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JARVIS OS — Pipeline Démo Vidéo (document complet)</title>
+<meta name="description" content="Pipeline complète de démonstration vidéo narrée de JARVIS OS : capture X11 réelle + voix off edge-tts + montage ffmpeg, 0-token. Scripts, artefacts vérifiés, skill run-jarvis-demo-video.">
+<meta name="keywords" content="JARVIS OS, démo vidéo, pipeline vidéo, edge-tts, voix off française, ffmpeg, capture X11, montage maître, widget bureau, run-jarvis-demo-video, 0-token, Pillow carton intro, xdotool, CDP, wmctrl, screen record narré, Turbo31150">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#1a1a2e;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding:0 22px 60px}
+.banner{background:linear-gradient(135deg,#0b3d91,#1565c0);color:#fff;padding:38px 22px;margin-bottom:8px}
+.banner .wrap{padding-bottom:0}.banner h1{margin:.1em 0;font-size:1.7em}.banner .sub{opacity:.85;font-size:.95em}
+h2{font-size:1.25em;color:#0b3d91;margin-top:1.9em;border-bottom:2px solid #eee;padding-bottom:.2em;scroll-margin-top:12px}
+h3{font-size:1.02em;margin-top:1.4em}
+a{color:#1565c0;text-decoration:none}a:hover{text-decoration:underline}
+code{background:#f1f3f8;padding:1px 5px;border-radius:4px;font-size:.88em}
+a code{color:#1565c0}
+pre{background:#0d1117;color:#c9d1d9;padding:14px 16px;border-radius:8px;overflow:auto;font-size:.84em;line-height:1.5}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.88em}th,td{border:1px solid #e3e6ef;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f5f7fb}tr:nth-child(even) td{background:#fafbfe}
+.badge{display:inline-block;background:#e8f0ff;color:#0b3d91;border:1px solid #c9dbff;border-radius:20px;padding:2px 10px;font-size:.8em;margin:2px 4px 2px 0}
+.nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 4px}
+.nav a{background:#f5f7fb;border:1px solid #e3e6ef;border-radius:6px;padding:5px 11px;font-size:.82em;font-weight:600}
+.nav a:hover{background:#e8f0ff;text-decoration:none}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:1em 0}
+.flow .step{background:#f8faff;border:1px solid #e3e8f5;border-left:4px solid #1565c0;border-radius:8px;padding:10px 14px;font-size:.85em;font-weight:600}
+.flow .arw{color:#1565c0;font-weight:700}
+.ok{color:#12813f;font-weight:700}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid #eee;color:#8892a8;font-size:.85em;text-align:center}
+</style></head><body>
+<div class="banner"><div class="wrap"><h1>JARVIS OS — Pipeline Démo Vidéo</h1>
+<div class="sub">Document complet · skill <code>run-jarvis-demo-video</code> · session 2026-07-17 · 0-token · <span class="ok">artefacts vérifiés</span></div></div></div>
+<div class="wrap">
+
+<nav class="nav">
+<a href="#flux">1 · Flux</a>
+<a href="#skill">2 · Skill</a>
+<a href="#scripts">3 · Scripts</a>
+<a href="#artefacts">4 · Artefacts</a>
+<a href="#pack">5 · Pack</a>
+<a href="#liens">6 · Liens</a>
+<a href="#rejouer">7 · Rejouer</a>
+</nav>
+
+<p>Pipeline de <strong>démonstration vidéo narrée</strong> de JARVIS OS : capture d'écran réelle
+(widget bureau <code>:8899</code>, terminal des 1435 agents, HUD) + <strong>voix off française</strong>
+(edge-tts, nettoyée 0-symbole) → montage maître <code>.mp4</code> partageable.
+Tout est gratuit : TTS Microsoft edge, capture/mux ffmpeg local.
+Racine : <a href="file:///home/turbo/jarvis"><code>/home/turbo/jarvis</code></a>.</p>
+
+<div>
+<span class="badge">edge-tts (FR)</span><span class="badge">ffmpeg X11 capture</span>
+<span class="badge">Pillow carton intro</span><span class="badge">wmctrl mise en scène</span>
+<span class="badge">xdotool + CDP pilotage</span><span class="badge">concat montage</span>
+<span class="badge">headless-safe smoke</span><span class="badge">0-token</span>
+</div>
+
+<h2 id="flux">1 · Flux de bout en bout</h2>
+<div class="flow">
+<span class="step">narration .txt</span><span class="arw">→</span>
+<span class="step">clean_narration.py</span><span class="arw">→</span>
+<span class="step">edge-tts → .mp3</span><span class="arw">→</span>
+<span class="step">make-intro-card.py</span><span class="arw">→</span>
+<span class="step">capture X11 (ffmpeg)</span><span class="arw">→</span>
+<span class="step">mux audio+vidéo</span><span class="arw">→</span>
+<span class="step">build-montage-maitre.sh</span><span class="arw">→</span>
+<span class="step">montage-maitre.mp4</span>
+</div>
+<p>En mode <strong>headless</strong> (pas de <code>DISPLAY</code>), le smoke court la branche
+<em>clean_narration → carton PIL → TTS → mux</em> et produit <a href="file:///home/turbo/jarvis/demo/smoke-demo.mp4"><code>demo/smoke-demo.mp4</code></a> ;
+si un <code>DISPLAY</code> est présent, il ajoute la capture d'écran réelle.</p>
+
+<h2 id="skill">2 · La skill</h2>
+<table>
+<tr><th>Élément</th><th>Chemin</th></tr>
+<tr><td>Skill (manifest)</td><td><a href="file:///home/turbo/jarvis/.claude/skills/run-jarvis-demo-video/SKILL.md"><code>.claude/skills/run-jarvis-demo-video/SKILL.md</code></a> (6,3 Ko)</td></tr>
+<tr><td>Driver / smoke</td><td><a href="file:///home/turbo/jarvis/.claude/skills/run-jarvis-demo-video/smoke.sh"><code>.claude/skills/run-jarvis-demo-video/smoke.sh</code></a> — <em>8 checks, headless-safe</em></td></tr>
+</table>
+<p><strong>Déclencheurs :</strong> « génère une démo vidéo », « capture vidéo narrée », « montage maître »,
+« vidéo widget », « screen record narré », « run demo video », « smoke demo-video ».</p>
+<p><strong>Run agent :</strong></p>
+<pre>cd /home/turbo/jarvis
+bash .claude/skills/run-jarvis-demo-video/smoke.sh   # -&gt; "smoke: 8 ok / 0 fail" + demo/smoke-demo.mp4</pre>
+
+<h2 id="scripts">3 · Composants (scripts <code>bin/</code>) <span class="ok">— 9/9 présents</span></h2>
+<table>
+<tr><th>Script</th><th>Rôle</th><th>Sortie</th></tr>
+<tr><td><a href="file:///home/turbo/jarvis/bin/clean_narration.py"><code>bin/clean_narration.py</code></a></td><td>Filtre vocal : <code>%€°«»&amp;</code> → mots, retire tout caractère dicté (garde <code>. ,</code>)</td><td>texte propre TTS</td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/bin/make-intro-card.py"><code>bin/make-intro-card.py</code></a></td><td>Carton d'intro 1920×1080 (Pillow, accents + symboles parfaits)</td><td><code>intro.png</code></td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/bin/demo-widget-showcase.py"><code>bin/demo-widget-showcase.py</code></a></td><td>Widget plein écran (Chrome <code>--app</code>) + défilement doux + narration</td><td><code>showcase-widget.mp4</code></td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/bin/demo-scene.sh"><code>bin/demo-scene.sh</code></a></td><td>Mise en scène : terminal agents (gauche) + widget (droite) via wmctrl, charge LLM réelle</td><td><code>scene-jarvis.mp4</code></td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/bin/agents-activity.py"><code>bin/agents-activity.py</code></a></td><td>Dashboard terminal des 1435 agents (lit <code>agent-index.json</code>, lecture seule)</td><td>affichage ANSI</td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/bin/demo-widget-pilote.py"><code>bin/demo-widget-pilote.py</code></a></td><td>Pilotage souris : curseur réel (xdotool) ciblé via CDP, clic action sûre</td><td><code>pack/pilote-widget.mp4</code></td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/bin/demo-widget-video.sh"><code>bin/demo-widget-video.sh</code></a></td><td>Capture plein écran simple + narration (variante historique)</td><td><code>demo-widget-jarvis-*.mp4</code></td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/bin/demo-workflow-reel.sh"><code>bin/demo-workflow-reel.sh</code></a></td><td>Workflow réel filmé (agents en action)</td><td>clip workflow</td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/bin/build-montage-maitre.sh"><code>bin/build-montage-maitre.sh</code></a></td><td>Montage maître : carton intro + normalisation 1080p + concat des clips</td><td><code>montage-maitre-jarvis.mp4</code></td></tr>
+</table>
+
+<h2 id="artefacts">4 · Artefacts produits <span class="ok">(existence + durée vérifiées 2026-07-17)</span></h2>
+<table>
+<tr><th>Fichier (cliquable)</th><th>Durée</th><th>Taille</th><th>Rôle</th></tr>
+<tr><td><a href="file:///home/turbo/jarvis/demo/presentation-complete-jarvis.mp4"><code>demo/presentation-complete-jarvis.mp4</code></a></td><td>5 min 33</td><td>46 Mo</td><td><strong>PRÉSENTATION COMPLÈTE</strong> — Linux de base → scène système+terminal+todoliste+widget → showcase → pilotage → dossier · voix TTS · script <a href="file:///home/turbo/jarvis/bin/build-presentation-complete.sh"><code>bin/build-presentation-complete.sh</code></a></td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/demo/intro-linux-base.mp4"><code>demo/intro-linux-base.mp4</code></a></td><td>17 s</td><td>0,9 Mo</td><td>Point de départ : le bureau Ubuntu réel + narration</td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/demo/montage-maitre-jarvis.mp4"><code>demo/montage-maitre-jarvis.mp4</code></a></td><td>4 min 22</td><td>15 Mo</td><td>Montage maître (intro + widget/pilote/dossier)</td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/demo/scene-jarvis.mp4"><code>demo/scene-jarvis.mp4</code></a></td><td>48 s</td><td>27 Mo</td><td>Mise en scène terminal+widget</td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/demo/showcase-widget.mp4"><code>demo/showcase-widget.mp4</code></a></td><td>1 min 53</td><td>4,4 Mo</td><td>Widget plein écran narré</td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/demo/pack/pilote-widget.mp4"><code>demo/pack/pilote-widget.mp4</code></a></td><td>53 s</td><td>1,6 Mo</td><td>Pilotage souris réel</td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/demo/pack/preuve-widget-pack.mp4"><code>demo/pack/preuve-widget-pack.mp4</code></a></td><td>1 min 31</td><td>2,3 Mo</td><td>Vidéo-preuve du pack</td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/demo/smoke-demo.mp4"><code>demo/smoke-demo.mp4</code></a></td><td>4 s</td><td>84 Ko</td><td>Mini-démo du smoke-test (preuve pipeline headless)</td></tr>
+</table>
+<p><em>Chaque livrable « <code>-nom.mp4</code> » est un lien stable vers la dernière version ; les copies horodatées
+<code>-AAAAMMJJ-HHMMSS.mp4</code> conservent l'historique dans <a href="file:///home/turbo/jarvis/demo"><code>demo/</code></a>.</em></p>
+
+<h2 id="pack">5 · Pack de présentation</h2>
+<table>
+<tr><th>Fichier</th><th>Contenu</th></tr>
+<tr><td><a href="file:///home/turbo/jarvis/demo/pack/PACK_PRESENTATION.html"><code>PACK_PRESENTATION.html</code></a> · <a href="file:///home/turbo/jarvis/demo/pack/PACK_PRESENTATION.pdf"><code>.pdf</code></a> · <a href="file:///home/turbo/jarvis/demo/pack/PACK_PRESENTATION.md"><code>.md</code></a></td><td>Dossier de présentation 6 sections (dernier build : 01:52)</td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/demo/pack/AUDIT_COHERENCE.md"><code>pack/AUDIT_COHERENCE.md</code></a></td><td>Audit de cohérence des chiffres — <span class="ok">0 contradiction 🔴 active</span></td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/demo/pack/sections"><code>pack/sections/</code></a></td><td>Les 6 sections source (00 → 05)</td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/demo/pack/youtube-metadata.md"><code>pack/youtube-metadata.md</code></a></td><td>Titre / description / tags YouTube</td></tr>
+<tr><td><a href="file:///home/turbo/jarvis/demo/pack/build-preuve-video.sh"><code>pack/build-preuve-video.sh</code></a> · <a href="file:///home/turbo/jarvis/demo/pack/build-pack.sh"><code>build-pack.sh</code></a></td><td>Générateurs pack-preuve + dossier</td></tr>
+</table>
+
+<h2 id="liens">6 · Liens & sources</h2>
+<table>
+<tr><th>Ressource</th><th>Lien</th></tr>
+<tr><td>Dépôt source (chiffres 928 / 900+ / benchmarks)</td><td><a href="https://github.com/Turbo31150/jarvis-linux">github.com/Turbo31150/jarvis-linux</a></td></tr>
+<tr><td>Short vertical 9:16 (pipeline sœur, ffmpeg 0-token)</td><td><a href="file:///home/turbo/jarvis-shorts-gen/out"><code>~/jarvis-shorts-gen/out/</code></a> · skill <code>run-jarvis-short</code></td></tr>
+<tr><td>Log de session</td><td><a href="file:///home/turbo/.remember/today-2026-07-17.md"><code>~/.remember/today-2026-07-17.md</code></a> · <code>recent.md</code> · <code>archive.md</code></td></tr>
+<tr><td>Reports machines</td><td><a href="file:///home/turbo/jarvis-linux/machines"><code>~/jarvis-linux/machines/M{1,2,4,5}_report.md</code></a></td></tr>
+</table>
+<p>Pipeline démo-vidéo construite dans la session du 2026-07-17 (scripts <code>bin/*</code> horodatés 00:19 → 02:08, skill créée 01:57).</p>
+
+<h2 id="rejouer">7 · Régénérer / rejouer</h2>
+<pre>cd /home/turbo/jarvis
+# 1. Valider tout le pipeline (8 checks) + mini-démo preuve  [headless-safe]
+bash .claude/skills/run-jarvis-demo-video/smoke.sh
+# 2. Clips individuels (widget doit tourner : systemctl --user start jarvis-planning-widget.service)
+python3 bin/demo-widget-showcase.py        # showcase-widget.mp4  (~1 min 53)
+bash    bin/demo-scene.sh                   # scene-jarvis.mp4     (~48 s)
+python3 bin/demo-widget-pilote.py          # pack/pilote-widget.mp4 (~53 s)
+# 3. Montage maître final
+bash    bin/build-montage-maitre.sh         # montage-maitre-jarvis.mp4 (~4 min 22)
+# Visionner (bureau réel = :1) :
+DISPLAY=:1 mpv --loop --fs demo/montage-maitre-jarvis.mp4</pre>
+
+<footer>Généré par JARVIS OS · pipeline démo-vidéo · <a href="file:///home/turbo/jarvis/demo/PIPELINE-DEMO-VIDEO.html">demo/PIPELINE-DEMO-VIDEO.html</a> · 2026-07-17</footer>
+</div></body></html>
