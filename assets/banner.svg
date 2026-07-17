@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" role="img" aria-label="JARVIS OS">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0e14"/>
+      <stop offset="0.55" stop-color="#141a2a"/>
+      <stop offset="1" stop-color="#0b0e14"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d4af37"/>
+      <stop offset="1" stop-color="#f4d06f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.1" r="0.9">
+      <stop offset="0" stop-color="#2a3350" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#0b0e14" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="0.5"/></filter>
+  </defs>
+
+  <rect width="1280" height="340" fill="url(#bg)"/>
+  <rect width="1280" height="340" fill="url(#glow)"/>
+
+  <!-- grid dots -->
+  <g fill="#233" opacity="0.35">
+    <!-- decorative nodes -->
+  </g>
+
+  <!-- orbit emblem -->
+  <g transform="translate(1050,170)" opacity="0.9">
+    <circle r="110" fill="none" stroke="#232c40" stroke-width="2"/>
+    <circle r="78" fill="none" stroke="#232c40" stroke-width="2"/>
+    <circle r="110" fill="none" stroke="url(#gold)" stroke-width="2" stroke-dasharray="8 210" transform="rotate(-30)"/>
+    <circle r="78"  fill="none" stroke="url(#gold)" stroke-width="2" stroke-dasharray="6 140" transform="rotate(120)"/>
+    <circle r="6" fill="url(#gold)"/>
+    <circle cx="110" cy="0" r="7" fill="#5b9dff" transform="rotate(-30)"/>
+    <circle cx="78" cy="0" r="6" fill="#3ddc97" transform="rotate(120)"/>
+    <circle cx="0" cy="-110" r="5" fill="#f4d06f"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="90" y="150" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" fill="#ffffff" letter-spacing="1">JARVIS<tspan fill="url(#gold)"> OS</tspan></text>
+  <text x="94" y="200" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="500" fill="#98a2b8">Infrastructure d'IA distribuée &amp; souveraine · 100 % locale</text>
+
+  <!-- chips -->
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="600">
+    <g transform="translate(94,240)">
+      <rect width="150" height="34" rx="17" fill="#161c2b" stroke="#232c40"/>
+      <text x="75" y="22" text-anchor="middle" fill="#e9edf5">🔒 Zero-Cloud</text>
+    </g>
+    <g transform="translate(256,240)">
+      <rect width="132" height="34" rx="17" fill="#161c2b" stroke="#232c40"/>
+      <text x="66" y="22" text-anchor="middle" fill="#e9edf5">🇪🇺 RGPD natif</text>
+    </g>
+    <g transform="translate(400,240)">
+      <rect width="150" height="34" rx="17" fill="#161c2b" stroke="#232c40"/>
+      <text x="75" y="22" text-anchor="middle" fill="#e9edf5">⚡ 0 token facturé</text>
+    </g>
+    <g transform="translate(562,240)">
+      <rect width="188" height="34" rx="17" fill="#161c2b" stroke="#232c40"/>
+      <text x="94" y="22" text-anchor="middle" fill="#e9edf5">🧠 modèles open-source</text>
+    </g>
+  </g>
+</svg>

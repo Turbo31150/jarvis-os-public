@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JARVIS OS — L'IA d'entreprise souveraine · Dossier commercial</title>
+<meta name="description" content="JARVIS OS — infrastructure d'IA distribuée 100% locale, zéro cloud, RGPD natif. Preuves chiffrées, ROI mesuré, souveraineté totale des données.">
+<style>
+  :root{
+    --bg:#0b0e14; --bg2:#111623; --card:#161c2b; --line:#232c40;
+    --ink:#e9edf5; --mut:#98a2b8; --gold:#d4af37; --gold2:#f4d06f;
+    --grn:#3ddc97; --blu:#5b9dff; --red:#ff6b6b; --amb:#ffb454;
+    --sh:0 8px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 700px at 70% -10%,#182036 0%,var(--bg) 55%);
+    color:var(--ink);font:15px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:var(--gold2);text-decoration:none} a:hover{text-decoration:underline}
+
+  header.hero{padding:70px 0 44px;border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(212,175,55,.06),transparent)}
+  .kicker{letter-spacing:.28em;text-transform:uppercase;font-size:12px;color:var(--gold);font-weight:700}
+  h1{font-size:clamp(32px,5.4vw,56px);line-height:1.03;margin:.35em 0 .25em;font-weight:800;
+    background:linear-gradient(90deg,#fff,#f4d06f);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--mut);font-size:19px;max-width:680px}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .badge{font-size:12px;font-weight:600;padding:6px 12px;border:1px solid var(--line);
+    border-radius:999px;background:var(--bg2)}
+  .badge b{color:var(--gold2)}
+
+  section{padding:48px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+  h3.big{font-size:26px;margin:0 0 12px;font-weight:800}
+  .lead{color:var(--mut);margin:0 0 26px;max-width:740px;font-size:16px}
+
+  .grid{display:grid;gap:16px}
+  .kpis{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--sh)}
+  .kpi .n{font-size:32px;font-weight:800;line-height:1;letter-spacing:-.5px}
+  .kpi .n small{font-size:15px;color:var(--mut);font-weight:600;margin-left:3px}
+  .kpi .l{color:var(--mut);font-size:13px;margin-top:6px}
+  .kpi .bar{height:6px;border-radius:6px;background:var(--line);margin-top:14px;overflow:hidden}
+  .kpi .bar>i{display:block;height:100%;border-radius:6px}
+  .c-grn{color:var(--grn)} .c-blu{color:var(--blu)} .c-gold{color:var(--gold2)} .c-amb{color:var(--amb)} .c-red{color:var(--red)}
+  .bg-grn{background:linear-gradient(90deg,#2fb883,var(--grn))}
+  .bg-blu{background:linear-gradient(90deg,#3f6fd0,var(--blu))}
+  .bg-gold{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+  .bg-amb{background:linear-gradient(90deg,#e0912f,var(--amb))}
+  .bg-red{background:linear-gradient(90deg,#d84a4a,var(--red))}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+  @media(max-width:760px){.two{grid-template-columns:1fr}}
+  .panel h3{margin:0 0 4px;font-size:16px}
+  .panel .cap{color:var(--mut);font-size:13px;margin:0 0 18px}
+  svg{max-width:100%;height:auto;display:block}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font-size:13px;color:var(--mut)}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+  .ok{color:var(--grn);font-weight:700} .warn{color:var(--amb);font-weight:700}
+  .vs td:nth-child(2){color:var(--mut)} .vs td:nth-child(3){color:var(--gold2);font-weight:600}
+
+  .cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
+    background:linear-gradient(120deg,#1a2138,#141a2a);border:1px solid var(--line);border-radius:18px;padding:26px}
+  .btn{background:linear-gradient(90deg,var(--gold),var(--gold2));color:#1a1200;font-weight:800;
+    padding:12px 22px;border-radius:12px;display:inline-block}
+  footer{padding:36px 0 60px;color:var(--mut);font-size:13px}
+  .foot-grid{display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:space-between;align-items:center}
+  ul.clean{list-style:none;padding:0;margin:0} ul.clean li{padding:8px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+  ul.clean li::before{content:"✓";color:var(--grn);font-weight:800;margin-right:10px}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Dossier commercial · Confidentiel</div>
+  <h1>L'intelligence artificielle qui vous appartient.</h1>
+  <p class="sub"><b style="color:#fff">JARVIS OS</b> — infrastructure d'IA distribuée, 100&nbsp;% locale,
+  <b style="color:#fff">zéro cloud, RGPD natif</b>. Vos données ne quittent jamais votre parc.
+  Preuves mesurées, pas de promesses.</p>
+  <div class="badges">
+    <span class="badge">🔒 <b>0&nbsp;€ cloud</b> récurrent</span>
+    <span class="badge">🇪🇺 <b>RGPD</b> natif · on-premise</span>
+    <span class="badge">⚡ <b>0 token</b> facturé</span>
+    <span class="badge">🧠 modèles <b>open-source</b> locaux</span>
+    <span class="badge">📅 17/07/2026</span>
+  </div>
+</div></header>
+
+<!-- PROBLEME / SOLUTION -->
+<section><div class="wrap">
+  <h2>Le constat</h2>
+  <h3 class="big">L'IA cloud vous coûte cher — et vous expose.</h3>
+  <p class="lead">Abonnements qui gonflent, données envoyées chez des tiers, latence et coût à chaque requête,
+  verrouillage fournisseur. Pour une entreprise, c'est un risque financier <b>et</b> réglementaire.</p>
+  <div class="two">
+    <div class="card">
+      <h3 style="margin:0 0 12px">❌ Solutions cloud classiques</h3>
+      <ul class="clean" style="--mut">
+        <li style="color:var(--mut)"><span style="color:var(--red);font-weight:800;margin-right:8px">✕</span>Données hébergées hors de l'entreprise</li>
+        <li style="color:var(--mut)"><span style="color:var(--red);font-weight:800;margin-right:8px">✕</span>Abonnements récurrents qui augmentent</li>
+        <li style="color:var(--mut)"><span style="color:var(--red);font-weight:800;margin-right:8px">✕</span>Verrouillage fournisseur (vendor lock-in)</li>
+        <li style="color:var(--mut)"><span style="color:var(--red);font-weight:800;margin-right:8px">✕</span>Coût &amp; latence à chaque requête</li>
+      </ul>
+    </div>
+    <div class="card" style="border-color:rgba(61,220,151,.35)">
+      <h3 style="margin:0 0 12px">✓ JARVIS OS</h3>
+      <ul class="clean">
+        <li>Données 100&nbsp;% chez le client — RGPD natif</li>
+        <li>Infrastructure possédée — 0&nbsp;€ cloud récurrent</li>
+        <li>Compatible <b>toutes</b> les IA, modèles open-source</li>
+        <li>S'adapte au parc existant — smartphone → cluster</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- PREUVES CHIFFREES -->
+<section><div class="wrap">
+  <h2>Preuves chiffrées</h2>
+  <h3 class="big">Des résultats mesurés le 17/07/2026 — pas des estimations.</h3>
+  <div class="grid kpis" style="margin-top:22px">
+    <div class="card kpi"><div class="n c-grn">99,6<small>%</small></div><div class="l">succès sur 4 413 appels LLM</div><div class="bar"><i class="bg-grn" style="width:99.6%"></i></div></div>
+    <div class="card kpi"><div class="n c-blu">91,8<small>%</small></div><div class="l">du trafic reste local (M1)</div><div class="bar"><i class="bg-blu" style="width:91.8%"></i></div></div>
+    <div class="card kpi"><div class="n c-gold">~1,1<small>s</small></div><div class="l">réponse interactive médiane</div><div class="bar"><i class="bg-gold" style="width:64%"></i></div></div>
+    <div class="card kpi"><div class="n c-gold">51<small>tok/s</small></div><div class="l">débit max</div><div class="bar"><i class="bg-gold" style="width:78%"></i></div></div>
+    <div class="card kpi"><div class="n c-amb">10,51<small>%</small></div><div class="l">WER vocal (dataset FLEURS)</div><div class="bar"><i class="bg-amb" style="width:89.5%"></i></div></div>
+    <div class="card kpi"><div class="n c-gold">0<small>€</small></div><div class="l">token payant · 100 % local</div><div class="bar"><i class="bg-gold" style="width:100%"></i></div></div>
+  </div>
+</div></section>
+
+<!-- ROI CLIENT + GRAPHIQUES -->
+<section><div class="wrap">
+  <h2>Retour sur investissement</h2>
+  <h3 class="big">Ce que ça change, concrètement.</h3>
+  <p class="lead">Résultats annoncés côté client (déploiement AlkymIA-OS) et livrable de référence chronométré.</p>
+  <div class="two">
+
+    <!-- KPI ROI -->
+    <div class="card panel">
+      <h3>Impact opérationnel client</h3>
+      <p class="cap">Déploiement type — traitement des commandes</p>
+      <div class="grid kpis" style="grid-template-columns:1fr 1fr">
+        <div class="card kpi" style="box-shadow:none"><div class="n c-grn">−14<small>h/sem</small></div><div class="l">temps libéré</div></div>
+        <div class="card kpi" style="box-shadow:none"><div class="n c-gold">×6</div><div class="l">plus rapide</div></div>
+        <div class="card kpi" style="box-shadow:none"><div class="n c-blu">+340<small>%</small></div><div class="l">ROI à 12 mois</div></div>
+        <div class="card kpi" style="box-shadow:none"><div class="n c-gold">0<small>€</small></div><div class="l">cloud</div></div>
+      </div>
+    </div>
+
+    <!-- BARRES vs freelance -->
+    <div class="card panel">
+      <h3>Livrable standard : JARVIS vs freelance</h3>
+      <p class="cap">Scraper « catalogue → CSV » (livrable Fiverr/Upwork type)</p>
+      <svg viewBox="0 0 360 180" width="100%">
+        <text x="10" y="40" fill="#98a2b8" font-size="13">Freelance</text>
+        <rect x="10" y="50" width="330" height="26" rx="6" fill="#232c40"/>
+        <rect x="10" y="50" width="330" height="26" rx="6" fill="url(#gr)"/>
+        <text x="332" y="68" text-anchor="end" fill="#fff" font-size="13" font-weight="700">~2 h · 25–60 $</text>
+        <text x="10" y="118" fill="#98a2b8" font-size="13">JARVIS OS</text>
+        <rect x="10" y="128" width="330" height="26" rx="6" fill="#232c40"/>
+        <rect x="10" y="128" width="14" height="26" rx="6" fill="url(#gg)"/>
+        <text x="30" y="146" fill="#f4d06f" font-size="13" font-weight="800">36 s · 0 €</text>
+        <defs>
+          <linearGradient id="gr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d84a4a"/><stop offset="1" stop-color="#ff6b6b"/></linearGradient>
+          <linearGradient id="gg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d4af37"/><stop offset="1" stop-color="#f4d06f"/></linearGradient>
+        </defs>
+      </svg>
+      <div class="legend"><span><i class="dot bg-gold"></i>200× plus rapide, qualité 1000/1000 lignes, 100 % on-premise</span></div>
+    </div>
+  </div>
+
+  <!-- coût vocal annuel -->
+  <div class="card panel" style="margin-top:22px">
+    <h3>Coût annuel — interprète vocal (1 poste)</h3>
+    <p class="cap">Transcription 100 % locale (Whisper CUDA, 20× temps réel) vs API cloud</p>
+    <svg viewBox="0 0 720 120" width="100%">
+      <text x="10" y="34" fill="#98a2b8" font-size="13">Cloud (API)</text>
+      <rect x="120" y="20" width="560" height="26" rx="6" fill="url(#gr)"/>
+      <text x="672" y="38" text-anchor="end" fill="#fff" font-size="13" font-weight="700">1 440 – 2 500 $/an</text>
+      <text x="10" y="86" fill="#98a2b8" font-size="13">JARVIS OS</text>
+      <rect x="120" y="72" width="10" height="26" rx="5" fill="url(#gg)"/>
+      <text x="140" y="90" fill="#f4d06f" font-size="13" font-weight="800">0 €/an</text>
+    </svg>
+  </div>
+</div></section>
+
+<!-- COMPARATIF -->
+<section><div class="wrap">
+  <h2>Différenciateurs</h2>
+  <h3 class="big">Cloud classique vs JARVIS OS</h3>
+  <div class="card" style="padding:6px 6px 2px;margin-top:18px">
+    <table class="vs">
+      <thead><tr><th>Dimension</th><th>Cloud classique</th><th>JARVIS OS</th></tr></thead>
+      <tbody>
+        <tr><td>Localisation des données</td><td>dans le cloud</td><td>100 % chez le client</td></tr>
+        <tr><td>Modèle de coût</td><td>abonnements croissants</td><td>infrastructure possédée · 0 € récurrent</td></tr>
+        <tr><td>Dépendance fournisseur</td><td>verrouillage</td><td>toutes IA, modèles open-source</td></tr>
+        <tr><td>Matériel</td><td>imposé</td><td>s'adapte au parc existant</td></tr>
+        <tr><td>Pilotage</td><td>souris / écran</td><td>voix (STT + TTS intégrés)</td></tr>
+        <tr><td>Résilience</td><td>redémarrage manuel</td><td>auto-réparation &lt; 8 s · uptime 99,7 %</td></tr>
+        <tr><td>Coût par requête</td><td>latence + facturation</td><td>cache hit 96,9 % · 0 token facturé</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div></section>
+
+<!-- INFRASTRUCTURE -->
+<section><div class="wrap">
+  <h2>Infrastructure &amp; capacité</h2>
+  <h3 class="big">Un socle robuste, une feuille de route maîtrisée.</h3>
+  <p class="lead">Cluster multi-nœuds sur matériel grand public. Le socle permanent (M1 + M2 + M5) assure
+  la production ; la montée en capacité est planifiée et chiffrée.</p>
+  <div class="two">
+    <div class="card panel">
+      <h3>État du parc</h3>
+      <p class="cap">Socle permanent opérationnel · capacité d'extension identifiée</p>
+      <ul class="clean" style="font-size:14px">
+        <li><b>M1</b> — orchestrateur + LLM primaire (3 GPU, 28 Go VRAM inférence)</li>
+        <li><b>M5</b> — relay vocal + MCP + PostgreSQL (pipeline voix complet)</li>
+        <li style="color:var(--mut)"><span class="warn" style="margin-right:8px">⚠</span><b>M2</b> — nœud calcul (3× RTX4000, 24 Go) à réactiver</li>
+      </ul>
+      <p class="cap" style="margin-top:14px">961 agents indexés · jusqu'à 1 435 composants · ~10 000 blocs 0-token · 169 skills-agents</p>
+    </div>
+    <div class="card panel">
+      <h3>Roadmap upgrade M1 — coût maîtrisé</h3>
+      <p class="cap">3 scénarios chiffrés (prix marché relevés)</p>
+      <svg viewBox="0 0 360 200" width="100%">
+        <line x1="46" y1="14" x2="46" y2="160" stroke="#232c40"/>
+        <line x1="46" y1="160" x2="350" y2="160" stroke="#232c40"/>
+        <!-- max ~2345 -> scale 130 -->
+        <!-- AM4 1660 -> h=92 -->
+        <rect x="78" y="68" width="62" height="92" rx="6" fill="#3ddc97"/>
+        <text x="109" y="59" text-anchor="middle" fill="#e9edf5" font-size="13" font-weight="700">≈1 660€</text>
+        <text x="109" y="177" text-anchor="middle" fill="#98a2b8" font-size="11">AM4 max</text>
+        <text x="109" y="190" text-anchor="middle" fill="#5b6a86" font-size="10">recommandé</text>
+        <!-- AM5 R8 1900 -> h=105 -->
+        <rect x="164" y="55" width="62" height="105" rx="6" fill="#ffb454"/>
+        <text x="195" y="46" text-anchor="middle" fill="#e9edf5" font-size="13" font-weight="700">≈1 900€</text>
+        <text x="195" y="177" text-anchor="middle" fill="#98a2b8" font-size="11">AM5 · R7</text>
+        <!-- AM5 R9 2195 -> h=122 -->
+        <rect x="250" y="38" width="62" height="122" rx="6" fill="#5b9dff"/>
+        <text x="281" y="29" text-anchor="middle" fill="#e9edf5" font-size="13" font-weight="700">≈2 195€</text>
+        <text x="281" y="177" text-anchor="middle" fill="#98a2b8" font-size="11">AM5 · R9</text>
+      </svg>
+      <div class="legend"><span><i class="dot bg-grn"></i>Meilleur ratio €/perf : AM4 + 128 Go DDR4 sur base existante</span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- CONFORMITE -->
+<section><div class="wrap">
+  <h2>Conformité &amp; normes</h2>
+  <h3 class="big">Souveraineté par conception.</h3>
+  <div class="grid kpis" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))">
+    <div class="card"><h3 style="margin:0 0 6px">🇪🇺 RGPD natif</h3><p style="color:var(--mut);margin:0;font-size:14px">Aucune donnée ne quitte l'infrastructure. Bases &amp; secrets on-premise (SQLite/PostgreSQL/Redis), sauvegardes chiffrées, secrets exclus de tout artefact.</p></div>
+    <div class="card"><h3 style="margin:0 0 6px">🔒 Zero-Cloud</h3><p style="color:var(--mut);margin:0;font-size:14px">Communications inter-nœuds sur <code>127.0.0.1</code>. Bascule cloud optionnelle, jamais imposée.</p></div>
+    <div class="card"><h3 style="margin:0 0 6px">📖 Open-source · MIT</h3><p style="color:var(--mut);margin:0;font-size:14px">Modèles open-source hébergés localement, pas de vendor lock-in. Code sous licence MIT, réutilisable.</p></div>
+    <div class="card"><h3 style="margin:0 0 6px">📊 Traçabilité</h3><p style="color:var(--mut);margin:0;font-size:14px">Chiffres figés sur décompte vérifié, chaque total traçable en une commande. Architecture entièrement documentée.</p></div>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<section style="border:0"><div class="wrap">
+  <div class="cta">
+    <div>
+      <h3 style="margin:0 0 6px;font-size:22px">Passez à une IA que vous possédez.</h3>
+      <p style="color:var(--mut);margin:0">Démonstration sur votre parc · audit d'infrastructure · déploiement sur mesure.</p>
+    </div>
+    <a class="btn" href="mailto:miningexpert31@gmail.com">Demander une démo →</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap foot-grid">
+  <div><b>Franck Delmas</b> — CTO &amp; Architecte Systèmes IA · Toulouse ·
+    <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></div>
+  <div>© 2026 JARVIS OS · AlkymIA-OS — dossier commercial confidentiel</div>
+</div></footer>
+
+</body>
+</html>
