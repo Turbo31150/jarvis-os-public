@@ -1,0 +1,2206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>JARVIS OS — Dossier de présentation</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+  <style type="text/css">@page { size: A4; margin: 2cm 1.8cm; }
+body { font-family: "DejaVu Sans","Segoe UI",sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1a1a2e; max-width: 820px; margin: auto; }
+h1 { color: #0b7285; border-bottom: 3px solid #0b7285; padding-bottom: 6px; page-break-before: always; }
+h1:first-of-type { page-break-before: avoid; font-size: 30pt; border: none; color: #0b7285; }
+h2 { color: #12657a; border-bottom: 1px solid #cde; padding-bottom: 3px; margin-top: 1.4em; }
+h3 { color: #1864ab; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 9.5pt; }
+th { background: #0b7285; color: #fff; text-align: left; padding: 6px 9px; }
+td { border: 1px solid #d0d7de; padding: 5px 9px; }
+tr:nth-child(even) td { background: #f3f8fa; }
+code { background: #eef2f5; padding: 1px 4px; border-radius: 3px; font-size: 9pt; }
+pre { background: #1a1a2e; color: #d6e9f0; padding: 12px; border-radius: 6px; overflow-x: auto; font-size: 8.5pt; }
+pre code { background: none; color: inherit; }
+blockquote { border-left: 4px solid #f59f00; background: #fff9db; margin: 12px 0; padding: 8px 14px; color: #664d03; }
+strong { color: #0b3d52; }
+hr { border: none; border-top: 1px solid #cde; margin: 1.5em 0; }
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">JARVIS OS — Dossier de présentation</h1>
+</header>
+<h1 id="jarvis-os">JARVIS OS</h1>
+<h2 id="infrastructure-dintelligence-artificielle-distribuée-on-premise-et-souveraine">Infrastructure
+d’intelligence artificielle distribuée, on-premise et souveraine</h2>
+<p><strong>Dossier de présentation — 17 juillet 2026</strong> Franck
+Delmas · Architecte systèmes IA / Linux · <code>Turbo31150</code></p>
+<hr />
+<h2 id="synthèse-exécutive">Synthèse exécutive</h2>
+<p><strong>JARVIS OS transforme un simple Ubuntu Linux en un système
+d’exploitation IA autonome, 100 % local et sans coût cloud
+récurrent.</strong> Là où un Linux standard exécute des commandes,
+JARVIS <em>orchestre</em> : il route l’intelligence, s’auto-répare, se
+surveille et travaille en continu — sur du matériel grand public.</p>
+<h3 id="ce-qui-le-distingue-dun-linux-de-base">Ce qui le distingue d’un
+Linux de base</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Linux standard</th>
+<th>JARVIS OS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Modèle d’exécution</td>
+<td>commandes à la demande</td>
+<td>orchestration continue (agents + timers + auto-déclencheurs)</td>
+</tr>
+<tr class="even">
+<td>Intelligence</td>
+<td>aucune</td>
+<td>routeur LLM unifié <strong>0-token</strong>, cascade
+multi-modèles</td>
+</tr>
+<tr class="odd">
+<td>Résilience</td>
+<td>redémarrage manuel</td>
+<td><strong>auto-réparation systemd &lt; 8 s</strong>, recovery GPU,
+backups horaires</td>
+</tr>
+<tr class="even">
+<td>Mémoire système</td>
+<td>swappiness 60, governor <code>schedutil</code></td>
+<td><strong>ZRAM zstd 3,07:1</strong>, governor
+<code>performance</code>, HugePages, <code>mitigations=off</code></td>
+</tr>
+<tr class="odd">
+<td>Souveraineté</td>
+<td>dépend des services tiers</td>
+<td><strong>0 € cloud, 0 token payant, RGPD natif</strong></td>
+</tr>
+<tr class="even">
+<td>Observabilité</td>
+<td>logs épars</td>
+<td>widget bureau temps réel « Ce que le système fait »</td>
+</tr>
+</tbody>
+</table>
+<h3 id="preuves-chiffrées-mesurées-le-17072026">Preuves chiffrées
+(mesurées le 17/07/2026)</h3>
+<ul>
+<li><strong>99,6 %</strong> de succès sur <strong>4 413</strong> appels
+LLM réels ; <strong>91,8 %</strong> du trafic reste sur M1 en local ;
+<strong>&lt; 1 %</strong> cloud gratuit, <strong>0 token
+payant</strong>.</li>
+<li>Réponse interactive médiane <strong>~1,1 s</strong> ; débit jusqu’à
+<strong>51 tok/s</strong>.</li>
+<li>Interprète vocal 100 % local : <strong>WER 10,51 %</strong> sur le
+dataset officiel Google FLEURS, <strong>20× le temps réel</strong>, pour
+<strong>0 €/an</strong> (vs 1 440–2 500 $/an en cloud).</li>
+<li>Bande passante RAM <strong>107 954 MiB/s</strong>, ZRAM ratio
+<strong>3,07:1</strong>, débit CPU 16 threads <strong>14 560
+év/s</strong> ; aucun GPU en zone thermique critique sous charge.</li>
+<li>Efficience : l’ensemble tourne sur <strong>~1 % d’un
+petaFLOP</strong> (matériel grand public).</li>
+</ul>
+<h3 id="périmètre">Périmètre</h3>
+<p>Cluster <strong>5 nœuds</strong>, <strong>12 GPU</strong> (~94 Go
+VRAM cumulée, <strong>28 Go dédiés à l’inférence</strong> sur M1), hub
+LLM local (ports 18800-18803), <strong>961 agents indexés</strong>
+(jusqu’à <strong>1 435 composants actifs</strong> toutes couches,
+cf. section 5), <strong>169 skills-agents</strong>, bibliothèque-routeur
+de <strong>~10 000 blocs</strong> 0-token, et un widget de supervision
+bureau supervisé par systemd. Les nœuds HP-A/HP-B (Vocal/LLM HQ) ne sont
+pas toujours en ligne ; le socle permanent reste M1 + M2 + M5.</p>
+<blockquote>
+<p><strong>Note de rigueur.</strong> Ce dossier croise trois décomptes
+d’agents concordants et vérifiables (961 index cowork · 1 354 comptage
+entreprise · 1 435 inventaire OMEGA) — trois périmètres emboîtés, pas
+des chiffres contradictoires ; le détail complet est en section 5. Le «
+928 » (slogan marketing <code>jarvis-linux</code>) et le badge « 900+ »
+(OpenClaw) mélangent agents et capacité de parallélisme : ils ne servent
+pas de base aux totaux vérifiés.</p>
+</blockquote>
+<hr />
+<h2 id="sommaire">Sommaire</h2>
+<ol type="1">
+<li><strong>Architecture &amp; périmètre</strong> — topologie cluster,
+stack logicielle, souveraineté</li>
+<li><strong>Benchmarks &amp; performance</strong> — latences, débit,
+local vs cloud, interprète vocal</li>
+<li><strong>Hardware, BIOS &amp; couche système</strong> — CPU/PBO,
+ZRAM, RAM, latence, GPU, kernel</li>
+<li><strong>Le widget bureau « Ce que le système fait »</strong> —
+architecture &amp; utilisation</li>
+<li><strong>Écosystème d’agents — le décompte réel</strong> — trois
+décomptes concordants, périmètres emboîtés</li>
+<li><strong>Démonstration vidéo</strong> — capture narrée du widget en
+fonctionnement réel</li>
+</ol>
+<hr />
+<h1 id="architecture-périmètre">1. Architecture &amp; périmètre</h1>
+<h2 id="architecture-périmètre-jarvis-os">01 · Architecture &amp;
+Périmètre — JARVIS OS</h2>
+<blockquote>
+<p>Section extraite du GitHub réel <code>Turbo31150/jarvis-core</code>
+et du système local M1 (2026-07-17). Tous les chiffres ci-dessous sont
+vérifiés depuis le dépôt et/ou la machine. Les écarts éventuels entre le
+slogan marketing et le réel local sont signalés explicitement.</p>
+</blockquote>
+<hr />
+<h2 id="vision-positionnement">1. Vision &amp; positionnement</h2>
+<p><strong>JARVIS OS — Infrastructure IA distribuée souveraine,
+on-premise, 0 cloud.</strong></p>
+<p>Auteur : <strong>Franck Delmas · AI Systems Architect ·
+Toulouse</strong>.</p>
+<p>Le système est une <strong>couche d’orchestration multi-agents
+entièrement auto-hébergée</strong> pour Linux : elle exécute des
+dizaines de CLIs spécialisés, des chaînes d’automatisation « Domino » et
+des centaines d’agents concurrents, en <strong>remplaçant les
+abonnements LLM cloud (GPT-4o, etc.) à coût cloud nul</strong>.
+Construite sur Docker Swarm + Redis + PostgreSQL + LLM locaux.</p>
+<p>Positionnement en une phrase (dépôt <code>jarvis-linux</code>) : &gt;
+<em>« The OS that never sleeps, never forgets, never bills you.
+»</em></p>
+<p>Trois dépôts portent le même produit sous trois angles :</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dépôt</th>
+<th>Angle</th>
+<th>Statut</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>jarvis-core</code></td>
+<td>Cœur technique — orchestrateur, MCP, agents, watchdogs</td>
+<td>Privé (NDA)</td>
+</tr>
+<tr class="even">
+<td><code>jarvis-linux</code></td>
+<td>Vitrine performance / benchmarks vs cloud</td>
+<td>Public</td>
+</tr>
+<tr class="odd">
+<td><code>alkymia-os</code> (AlkymIA-OS)</td>
+<td>Offre commerciale grand public / PME, pilotable à la voix</td>
+<td>Public — <a href="https://alkymia-oss.netlify.app">alkymia-oss.netlify.app</a></td>
+</tr>
+</tbody>
+</table>
+<p>Dépôts complémentaires de l’écosystème : <code>jarvis-cowork</code>
+(workspace agents/skills OpenClaw), <code>jarvis-mcp-toolkit</code>
+(handlers MCP), <code>jarvis-browser-mcp</code> (automation navigateur
+CDP), <code>jarvis-zero-token</code>, <code>omertaflow</code> (Whisper
+Flow STT/TTS), <code>jarvis-profile</code> (dashboard GPU).</p>
+<hr />
+<h2 id="topologie-du-cluster-5-nœuds">2. Topologie du cluster (5
+nœuds)</h2>
+<p>Source : README <code>jarvis-core</code> (section « Cluster — 5 Nœuds
+»).</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nœud</th>
+<th>IP</th>
+<th>Rôle</th>
+<th>GPU</th>
+<th>VRAM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>M1</strong> — La Créatrice</td>
+<td>192.168.1.85</td>
+<td>LB1 · LM Studio · Docker Swarm</td>
+<td>RTX 2060 + 3× GTX 1660S + RTX 3080</td>
+<td>40 G</td>
+</tr>
+<tr class="even">
+<td><strong>M2</strong> — Le Géant</td>
+<td>192.168.1.26</td>
+<td>LB2 · Reasoning</td>
+<td>3× Quadro RTX 4000</td>
+<td>24 G</td>
+</tr>
+<tr class="odd">
+<td><strong>M5</strong> — OMEGA</td>
+<td>192.168.1.113</td>
+<td>Relay · Vocal · Claude Code</td>
+<td>GTX 1660S + GTX 1050 Ti</td>
+<td>10 G</td>
+</tr>
+<tr class="even">
+<td><strong>HP-A</strong></td>
+<td>192.168.1.90</td>
+<td>LLM HQ</td>
+<td>Quadro P4000</td>
+<td>8 G</td>
+</tr>
+<tr class="odd">
+<td><strong>HP-B</strong></td>
+<td>192.168.1.91</td>
+<td>Vocal dédié</td>
+<td>2× GPU 6 G</td>
+<td>12 G</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total matériel : 5 nœuds · 12 GPU · ~94 G VRAM
+cumulée</strong> (somme des lignes = 40+24+10+8+12 = 94 G ; M1 = 5 GPU =
+12+6+6+6+10 = 40 G).</p>
+<blockquote>
+<p>⚠️ <strong>Écart de chiffre à noter</strong> : la description courte
+du dépôt annonce « 68G VRAM » alors que le tableau détaillé du README et
+les badges affichent <strong>88 GB VRAM</strong>. Le total réel des
+lignes du tableau — avec M1 correctement compté à <strong>5 GPU / 40
+G</strong> (les 3× GTX 1660S sont confirmées par les 28 Go dédiés à
+l’inférence : 3×6+10) — donne <strong>94 G</strong>. Retenir <strong>94
+G</strong> (détail machine à jour) comme chiffre de référence ; 88 G
+reprenait un M1 à 4 GPU / 34 G, et 68 G est une valeur historique de la
+description, tous deux à corriger.</p>
+</blockquote>
+<blockquote>
+<p>⚠️ <strong>Total GPU</strong> : la somme des lignes donne <strong>12
+GPU</strong> (M1 5 + M2 3 + M5 2 + HP-A 1 + HP-B 2). Les nœuds
+<strong>HP-A/HP-B</strong> ne sont pas toujours en ligne ; le socle
+permanent M1 + M2 + M5 représente <strong>10 GPU</strong> actifs en
+continu.</p>
+</blockquote>
+<p>Fiches machines détaillées : <code>MACHINES_SPEC.md</code>,
+<code>docs/JARVIS_OS_ARCHITECTURE.md</code>,
+<code>docs/cluster/</code>.</p>
+<hr />
+<h2 id="stack-logicielle">3. Stack logicielle</h2>
+<h3 id="hub-llm-0-token-routeur">3.1 Hub LLM 0-token &amp; routeur</h3>
+<ul>
+<li><strong>Load balancing double étage</strong> : LB1 (M1) + LB2 (M2),
+Nginx, <strong>failover automatique</strong>, latence annoncée
+<strong>&lt; 3 s</strong>.</li>
+<li>Sur M1 en local, le <strong>hub LLM unifié</strong> expose un proxy
+OpenAI-compatible : ports <strong>18800</strong> (hub / chat_proxy),
+<strong>18801</strong> (dashboard), <strong>18802</strong> (ccr —
+claude-code-router), <strong>18803</strong> (sql-bridge) —
+cf. <code>docs/PORTS_REGISTRY.md</code>.</li>
+<li><strong>Moteurs d’inférence</strong> : <code>llama-server</code>,
+Ollama, LM Studio (M1 :1234), catalogue modèles :8500.</li>
+<li><strong>Modèles clés</strong> : Qwen3.5-27B/9B
+<em>Opus-Distilled</em>, DeepSeek-R1, Gemma3, plus embeddings locaux
+(nomic-embed) et Whisper distil-large-v3 (CUDA).</li>
+<li><strong>Protocole 0-token</strong> documenté :
+<code>PROTOCOL_ZERO_TOKEN.md</code>. Preuve de performance affichée :
+<strong>96,9 % de cache hit · 319 tokens sur 233 échanges · 0
+cloud</strong> (<code>docs/PROOF_JARVIS_CLAUDE_CODE.md</code>).</li>
+</ul>
+<h3 id="agents">3.2 Agents</h3>
+<ul>
+<li>Le README annonce <strong>900+ agents autonomes</strong> (badge +
+description) ; <code>jarvis-linux</code> chiffre à <strong>928 agents
+actifs</strong> (uptime 99,7 %).</li>
+<li>Réalité vérifiable côté dépôt/machine :
+<ul>
+<li><code>jarvis-core/agents/</code> = opérateurs Python spécialisés
+(browseros, container, github, mail, network, sql, telegram,
+voice…).</li>
+<li><code>jarvis-core/core/</code> = <strong>480 modules Python</strong>
+(<code>jarvis_*.py</code> : routeurs A/B, supervisor, mesh, planner,
+scheduler, aiops, admission controller, etc.) → 490 entrées de dossier
+au total.</li>
+<li>Registre Claude Code natif chargé en session M1 (agents natifs +
+plugins) : <strong>129 agents</strong>. Le strict
+<code>~/.claude/agents/*.md</code> (sans plugins) ne compte que
+<strong>58</strong> fichiers, retenus dans le total entreprise de 1 354
+(cf. section 5). Le 129 = façade Claude Code complète ; le 58 =
+sous-ensemble <code>.md</code> natif consolidé.</li>
+</ul></li>
+<li>Familles d’agents (README) : OpenClaw (900+), skills, Antigravity
+CLI zero-token.</li>
+</ul>
+<blockquote>
+<p>Le chiffre « 900+ » est une valeur d’écosystème global (OpenClaw +
+variantes). Au niveau du registre Claude Code local M1, la façade
+chargée en session (natifs + plugins) est de <strong>129 agents</strong>
+; le comptage entreprise n’en retient que les <strong>58</strong>
+fichiers <code>.md</code> stricts (section 5). Les trois sont mentionnés
+pour transparence.</p>
+</blockquote>
+<h3 id="skills">3.3 Skills</h3>
+<ul>
+<li>Registre local M1 (<code>~/.claude/skills/</code>) : <strong>53
+skills</strong>.</li>
+<li>Registre orchestrateur <code>orchestrator/registry.json</code> :
+<strong>52 skills · 127 agents · 2 browseros · 181 entrées</strong>
+(snapshot).</li>
+<li>README <code>jarvis-core</code> mentionne <strong>61 skills</strong>
+; <code>jarvis-cowork</code> <strong>86 skills</strong> — valeurs par
+périmètre de dépôt.</li>
+</ul>
+<h3 id="bibliothèque-routeur-anti-loop-0-token">3.4 Bibliothèque-routeur
+(anti-loop 0-token)</h3>
+<ul>
+<li><strong>Index central de blocs</strong>
+(<code>BLOCS-INDEX.tsv</code>) : ~2 579 blocs indexés (≈9 661 après
+expansion permanente) mappés sur 14 sources (prompts, n8n, scripts,
+docs, bases SQLite, dépôts GitHub, conteneurs, modes…).</li>
+<li>Principe : <em>une intention entre → un bloc prêt sort</em>, routage
+via <code>bloc.sh</code> avant toute délibération LLM → zéro token de
+compute facturé.</li>
+<li>Daemon <strong>Bibliothèque Vivante Infinie</strong>
+(<code>cli/biblio_filler.py</code>) : remplissage continu 0-token via LM
+Studio M1 :1234.</li>
+</ul>
+<h3 id="données-vocal-contenu">3.5 Données, vocal, contenu</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Module</th>
+<th>Contenu (README)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Data</strong></td>
+<td>SQLite · PostgreSQL · Redis · Pinecone · n8n (65 flows)</td>
+</tr>
+<tr class="even">
+<td><strong>Vocal</strong></td>
+<td>Whisper distil-large-v3 CUDA · Piper TTS · PTT Alt+X (dépôt
+<code>omertaflow</code> / Whisper Flow)</td>
+</tr>
+<tr class="odd">
+<td><strong>Content</strong></td>
+<td>Mirra autopublisher · 5 réseaux (Instagram, Threads, TikTok,
+YouTube) + LinkedIn CDP</td>
+</tr>
+<tr class="even">
+<td><strong>MCP</strong></td>
+<td>24 serveurs MCP (badge) · <code>jarvis-mcp-toolkit</code> = 88+
+handlers</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ports-services-m1-réel">3.6 Ports &amp; services (M1, réel)</h3>
+<p><code>docs/PORTS_REGISTRY.md</code> (généré 2026-07-16) : <strong>103
+ports · 23 services actifs</strong>. Hub LLM :18800, dashboard :18801,
+ccr :18802, sql-bridge :18803, LM Studio :1234, BrowserOS :9003.</p>
+<hr />
+<h2 id="souveraineté-rgpd">4. Souveraineté &amp; RGPD</h2>
+<ul>
+<li><strong>100 % local, 0 € cloud</strong> : aucune donnée ne quitte
+l’infrastructure du client ; RGPD natif (badges
+<code>jarvis-linux</code> et <code>alkymia-os</code>).</li>
+<li>Bases et secrets restent on-premise (SQLite / PostgreSQL / Redis) ;
+sauvegardes chiffrées vers dépôt privé, secrets exclus de tout artefact
+partagé.</li>
+<li>Modèles LLM <strong>open-source hébergés localement</strong> → pas
+de vendor lock-in, <strong>compatible avec toutes les IA</strong>
+(bascule cloud optionnelle uniquement pour économiser des jetons, jamais
+imposée).</li>
+<li>Pilotage à la voix (STT + TTS intégrés) sans API tierce.</li>
+</ul>
+<p>Résultats mesurés annoncés côté clients (<code>alkymia-os</code>) :
+<strong>−14 h/semaine · 0 € cloud · ×6 plus rapide</strong> sur le
+traitement des commandes · <strong>+340 % de ROI à 12 mois</strong>.</p>
+<hr />
+<h2 id="différenciateurs">5. Différenciateurs</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Solutions cloud classiques</th>
+<th>JARVIS OS / AlkymIA-OS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Données dans le cloud</td>
+<td>100 % local — données chez le client</td>
+</tr>
+<tr class="even">
+<td>Abonnements qui gonflent</td>
+<td>Infrastructure possédée (0 € cloud récurrent)</td>
+</tr>
+<tr class="odd">
+<td>Verrouillage fournisseur</td>
+<td>Compatible <strong>toutes</strong> les IA, modèles open-source</td>
+</tr>
+<tr class="even">
+<td>Matériel imposé</td>
+<td>S’adapte au parc existant — du smartphone au cluster 5 nœuds</td>
+</tr>
+<tr class="odd">
+<td>Pilotage souris/écran</td>
+<td><strong>Pilotable à la voix</strong> (STT + TTS)</td>
+</tr>
+<tr class="even">
+<td>Latence + coût par requête</td>
+<td>Failover LB1/LB2 &lt; 3 s · cache hit 96,9 % · 0 token facturé</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Preuves techniques distinctives :</strong> - Auto-réparation
+&lt; 8 s de latence (watchdogs + supervisor). - Transcription d’1 h
+d’audio en 48 s (Whisper CUDA), analyse PDF en 7,9 s. - Uptime 99,7 % ·
+agents 24/7. - Architecture entièrement documentée
+(<code>AUDIT_SYSTEME_JARVIS_OS.md</code>,
+<code>CAHIER_DES_CHARGES_FINAL.md</code>,
+<code>MASTER_ORCHESTRATION.md</code>).</p>
+<hr />
+<h2 id="annexe-chiffres-à-réconcilier-transparence">Annexe — Chiffres à
+réconcilier (transparence)</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Métrique</th>
+<th>Valeur description courte</th>
+<th>Valeur README détaillé / réel local</th>
+<th>Retenu</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>VRAM totale</td>
+<td>68 G</td>
+<td>94 G (somme tableau machines, M1 = 5 GPU / 40 G)</td>
+<td><strong>94 G</strong></td>
+</tr>
+<tr class="even">
+<td>GPU cluster</td>
+<td>—</td>
+<td>12 (M1 5 + M2 3 + M5 2 + HP-A 1 + HP-B 2)</td>
+<td><strong>12</strong> (10 permanents M1+M2+M5)</td>
+</tr>
+<tr class="odd">
+<td>Agents</td>
+<td>900+</td>
+<td>928 (jarvis-linux) · 129 Claude Code session (natifs+plugins) · 58
+<code>.md</code> natifs stricts</td>
+<td>900+ écosystème / 129 façade / 58 <code>.md</code></td>
+</tr>
+<tr class="even">
+<td>Skills</td>
+<td>61 (core) / 86 (cowork)</td>
+<td>53 (~/.claude) · 52 (orchestrator)</td>
+<td>53 local M1</td>
+</tr>
+<tr class="odd">
+<td>Modules core Python</td>
+<td>—</td>
+<td>480 fichiers <code>.py</code> dans <code>core/</code></td>
+<td>480</td>
+</tr>
+</tbody>
+</table>
+<h1 id="benchmarks-performance">2. Benchmarks &amp; performance</h1>
+<h2 id="benchmarks-performance-1">02 — Benchmarks &amp; Performance</h2>
+<blockquote>
+<p><strong>Tous les chiffres ci-dessous sont mesurés sur le matériel
+réel de production (M1), pas estimés.</strong> Chaque table cite sa
+source. Convention : <strong>(mesuré 2026-07-17)</strong> = relevé live
+pour ce dossier · <strong>(archive)</strong> = mesure horodatée d’un run
+antérieur, conservée telle quelle. Coût récurrent de toutes ces mesures
+: <strong>0 € / 0 token facturé</strong> (inférence 100 % locale ou
+cloud gratuit).</p>
+</blockquote>
+<hr />
+<h2 id="routage-llm-en-production-latences-réelles">1. Routage LLM en
+production — latences réelles</h2>
+<p>Le hub unifié <code>:18800</code> route chaque requête vers le
+backend le plus adapté (cascade 5 niveaux, failover automatique).
+Statistiques calculées sur le journal de routage réel
+<code>data/llm_cascade_log.jsonl</code>.</p>
+<p><strong>Fenêtre glissante (depuis 2026-07-15, 4 413 appels)</strong>
+— <em>(mesuré 2026-07-17, via
+<code>monitoring/llm_stats.py</code>)</em></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Métrique</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Appels routés</td>
+<td><strong>4 413</strong></td>
+</tr>
+<tr class="even">
+<td>Taux de succès</td>
+<td><strong>99,6 %</strong> (4 397 ok / 16 erreurs)</td>
+</tr>
+<tr class="odd">
+<td>Tentatives moyennes par appel</td>
+<td><strong>0,26</strong> (la 1ʳᵉ route suffit dans la grande
+majorité)</td>
+</tr>
+<tr class="even">
+<td>Fallbacks déclenchés</td>
+<td>894 (20,3 %)</td>
+</tr>
+<tr class="odd">
+<td>Latence <strong>p50</strong></td>
+<td><strong>10 741 ms</strong></td>
+</tr>
+<tr class="even">
+<td>Latence <strong>p95</strong></td>
+<td>44 444 ms</td>
+</tr>
+<tr class="odd">
+<td>Latence <strong>p99</strong></td>
+<td>172 146 ms</td>
+</tr>
+<tr class="even">
+<td>Latence min / max</td>
+<td>231 ms / 661 847 ms</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Répartition par backend servi</strong> — <em>(mesuré
+2026-07-17)</em></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Backend servi</th>
+<th>Part du trafic</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lmstudio-node10/qwen3.5-9b</code> (M1 relayé)</td>
+<td><strong>65,6 %</strong></td>
+<td>🔒 local souverain, prioritaire</td>
+</tr>
+<tr class="even">
+<td><code>lmstudio-m1/qwen3.5-9b</code></td>
+<td>26,2 %</td>
+<td>🔒 local direct</td>
+</tr>
+<tr class="odd">
+<td><code>ollama/gemma3:4b</code></td>
+<td>6,8 %</td>
+<td>🔒 fallback réactif (petit modèle)</td>
+</tr>
+<tr class="even">
+<td><code>ollama-cloud/gpt-oss:120b</code></td>
+<td>0,9 %</td>
+<td>☁️ gros contexte, gratuit</td>
+</tr>
+<tr class="odd">
+<td>autres (deepseek-r1, gpt-oss:20b-cloud)</td>
+<td>&lt; 0,1 %</td>
+<td>spécialisé</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Lecture souveraineté :</strong> <strong>91,8 % du trafic
+reste sur M1 local</strong> (65,6 % + 26,2 %), 98,6 % au total en local
+(+ gemma3), moins de 1 % part vers le cloud gratuit. Aucune donnée ni
+token vers un fournisseur payant.</p>
+</blockquote>
+<p><strong>Latences p50/p95 par backend</strong> <em>(fenêtre récente, 3
+000 derniers appels du 2026-07-16 — mesuré 2026-07-17)</em></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Backend</th>
+<th>n</th>
+<th>p50</th>
+<th>p95</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lmstudio-node10/qwen3.5-9b</code></td>
+<td>2 700</td>
+<td><strong>12 831 ms</strong></td>
+<td>35 694 ms</td>
+</tr>
+<tr class="even">
+<td><code>ollama/gemma3:4b</code></td>
+<td>252</td>
+<td>13 231 ms</td>
+<td>49 148 ms</td>
+</tr>
+<tr class="odd">
+<td><code>ollama-cloud/gpt-oss:120b</code></td>
+<td>17</td>
+<td>10 903 ms</td>
+<td>227 547 ms</td>
+</tr>
+<tr class="even">
+<td><code>lmstudio-m1/qwen3.5-9b</code> (direct, sans hub)</td>
+<td>17</td>
+<td>85 381 ms</td>
+<td>179 991 ms</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Le p50 « global » (~11–13 s) inclut les requêtes d’<strong>analyse
+longue</strong> (400+ tokens générés). Sur les requêtes
+<strong>interactives courtes</strong>, la latence chute à ~1,1 s (voir
+§2). Les 85 s de <code>lmstudio-m1</code> en appel <em>direct</em> sont
+l’artefact connu de <em>reasoning-runaway</em> de qwen3.5 ; le hub le
+neutralise (prefill <code>&lt;think&gt;&lt;/think&gt;</code>). Source :
+<code>data/llm_cascade_log.jsonl</code>.</p>
+</blockquote>
+<hr />
+<h2 id="débit-latence-par-backend-même-prompt-appel-contrôlé">2. Débit
+&amp; latence par backend — même prompt, appel contrôlé</h2>
+<p><em>(archive — <code>docs/BENCH_INFRA.md</code> &amp;
+<code>docs/BENCH_BACKENDS.md</code>)</em></p>
+<p><strong>Infra hub <code>:18800</code>, requêtes typées :</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Type de requête</th>
+<th>Latence médiane</th>
+<th>Débit moyen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Interactif (court)</strong></td>
+<td><strong>1 114 ms</strong></td>
+<td>16,7 tok/s</td>
+</tr>
+<tr class="even">
+<td>Analyse (long, ~400 tok)</td>
+<td>9 703 ms</td>
+<td>26,5 tok/s</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Comparatif multi-backend (même prompt « API REST en 60 mots
+», médiane) :</strong></p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Backend</th>
+<th>Localisation</th>
+<th>Latence médiane</th>
+<th>Débit</th>
+<th>Coût</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>M1 LM Studio (qwen3.5-9b), via hub</td>
+<td>🔒 local</td>
+<td><strong>~0,4 s</strong></td>
+<td>11–26 tok/s</td>
+<td>0 €</td>
+</tr>
+<tr class="even">
+<td>Ollama local (gemma3:4b)</td>
+<td>🔒 local</td>
+<td>4,5 s</td>
+<td>30 tok/s</td>
+<td>0 €</td>
+</tr>
+<tr class="odd">
+<td>Ollama cloud (gpt-oss:20b)</td>
+<td>☁️ gratuit</td>
+<td>3,5 s</td>
+<td><strong>51 tok/s</strong></td>
+<td>0 €</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Meilleure latence prod (M1 via hub) : <strong>~0,4 s</strong> ·
+meilleur débit (cloud gratuit) : <strong>51 tok/s</strong>. Tous à
+<strong>0 € / 0 token facturé</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="interprète-vocal-100-local-dataset-officiel-fleurs">3.
+Interprète vocal 100 % local — dataset officiel FLEURS</h2>
+<p><em>(archive — mesuré 2026-06-30 · repo public
+<code>Turbo31150/jarvis-interprete-benchmark</code>)</em> Interprète
+FR↔︎EN complet (STT → traduction → TTS) sur laptop grand public ASUS TUF
+F15 (i5-11400H · <strong>RTX 3050 Laptop 4 Go</strong>, ~800 €).</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Métrique</th>
+<th>Valeur</th>
+<th>Détail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>WER</strong> (Word Error Rate)</td>
+<td><strong>10,51 %</strong></td>
+<td>FLEURS <code>fr_fr</code>, 50 clips validation</td>
+</tr>
+<tr class="even">
+<td><strong>RTF / vitesse</strong></td>
+<td><strong>20,2× temps réel</strong> (GPU)</td>
+<td>faster-whisper <code>small</code> int8_float16</td>
+</tr>
+<tr class="odd">
+<td><strong>BLEU</strong> (traduction parole fr→en)</td>
+<td>17,2</td>
+<td>30 clips (BLEU sous-estime, réf reformulées)</td>
+</tr>
+<tr class="even">
+<td>Coût marginal</td>
+<td><strong>0 € / 0-token</strong></td>
+<td>100 % local, données jamais externalisées</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coût vs cloud — 1 000 h audio/an (prix publics 2026)
+:</strong></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Solution</th>
+<th>Coût annuel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Azure (traduction temps réel)</td>
+<td>≈ 2 500 $/an</td>
+</tr>
+<tr class="even">
+<td>Google STT (+ traduction)</td>
+<td>≈ 1 440 $/an</td>
+</tr>
+<tr class="odd">
+<td><strong>JARVIS / laptop local</strong></td>
+<td><strong>0 € récurrent</strong> (machine amortie en &lt; 2 mois)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Efficience petaFLOP :</strong> le benchmark a tourné sur
+~<strong>1 % d’un petaFLOP</strong> (RTX 3050 ≈ 11 TFLOPS FP16 / 44 TOPS
+INT8). Atteindre 1 PFLOP demanderait ≈ 91 de ces laptops (≈ 73 000 €) ou
+≈ 2 H100. L’avantage n’est pas le WER brut mais <strong>coût marginal
+nul + confidentialité totale + vitesse + zéro quota</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="gpu-état-thermique-vram-live">4. GPU — état thermique &amp; VRAM
+(live)</h2>
+<p><em>(mesuré 2026-07-17, <code>nvidia-smi</code>)</em> — 5 GPU
+physiques sur M1 (RTX 2060 + 3× GTX 1660S + RTX 3080).</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>GPU</th>
+<th>Rôle</th>
+<th>Temp.</th>
+<th>VRAM util. / totale</th>
+<th>Charge</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RTX 2060 (12 Go)</td>
+<td>🖥️ affichage (exclu des LLM)</td>
+<td>54 °C</td>
+<td>4 114 / 12 288 MiB</td>
+<td>1 %</td>
+</tr>
+<tr class="even">
+<td>GTX 1660 SUPER #1</td>
+<td>inférence dispo</td>
+<td>44 °C</td>
+<td>972 / 6 144 MiB</td>
+<td>0 %</td>
+</tr>
+<tr class="odd">
+<td><strong>GTX 1660 SUPER #2</strong></td>
+<td><strong>inférence LLM active</strong></td>
+<td><strong>73 °C</strong></td>
+<td>3 231 / 6 144 MiB</td>
+<td><strong>100 %</strong></td>
+</tr>
+<tr class="even">
+<td>GTX 1660 SUPER #3</td>
+<td>inférence dispo</td>
+<td>44 °C</td>
+<td>2 096 / 6 144 MiB</td>
+<td>0 %</td>
+</tr>
+<tr class="odd">
+<td>RTX 3080 (10 Go)</td>
+<td>modèle 9B chargé</td>
+<td>70 °C</td>
+<td>8 745 / 10 240 MiB</td>
+<td>0 % (idle entre req.)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Instantané pendant une charge d’inférence réelle : un 1660S sature à
+100 % à 73 °C, la RTX 3080 tient le modèle qwen3.5-9b en VRAM (8,7/10
+Go). Aucun GPU en zone critique. La RTX 2060 est réservée à l’affichage
+(règle anti-crash modeset), jamais sollicitée pour les LLM.</p>
+</blockquote>
+<hr />
+<h2 id="couche-système-m1-cpu-ram-disque-cache">5. Couche système M1 —
+CPU / RAM / disque / cache</h2>
+<p><em>(archive — mesuré 2026-07-16 03:53,
+<code>logs/bench_syskernel_20260716.md</code>, sysbench réel sous charge
+concurrente ~7-8)</em> CPU <strong>AMD Ryzen 7 5700X3D</strong> (8C/16T,
+V-Cache L3 96 Mo) · 46 Gio RAM + zram 24 Go zstd.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Composant</th>
+<th>Métrique</th>
+<th>Valeur mesurée</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CPU multi (16T)</td>
+<td>events/s prime20k</td>
+<td><strong>14 560 ev/s</strong></td>
+<td>OK (sous load concurrent)</td>
+</tr>
+<tr class="even">
+<td>CPU single (1T)</td>
+<td>events/s prime20k</td>
+<td>1 802 ev/s</td>
+<td>Boost actif</td>
+</tr>
+<tr class="odd">
+<td>CPU scaling</td>
+<td>multi/single</td>
+<td>8,08×</td>
+<td>Normal (SMT)</td>
+</tr>
+<tr class="even">
+<td><strong>RAM séquentiel</strong> (1M/8T)</td>
+<td>débit sysbench</td>
+<td><strong>107 954 MiB/s</strong> (~108 GB/s)</td>
+<td>Excellent (DDR4 2 canaux)</td>
+</tr>
+<tr class="odd">
+<td>STREAM (dataset &gt; L3)</td>
+<td>read cumulé</td>
+<td>~15,4 GB/s R · ~10,3 GB/s W</td>
+<td>DRAM-bound au-delà du V-Cache</td>
+</tr>
+<tr class="even">
+<td>L3 V-Cache 96M</td>
+<td>accès finissant en DRAM</td>
+<td><strong>~8,7 %</strong> des loads L1</td>
+<td>V-Cache retient l’essentiel</td>
+</tr>
+<tr class="odd">
+<td><strong>ZRAM</strong></td>
+<td>ratio compression zstd</td>
+<td><strong>3,07:1</strong> (6,36 GiB → 2,07 GiB)</td>
+<td>Excellent, coussin anti-OOM</td>
+</tr>
+<tr class="even">
+<td>Disque</td>
+<td>randread 4k QD1</td>
+<td>8 730 IOPS · 34,1 MiB/s</td>
+<td>Correct (latence QD1)</td>
+</tr>
+<tr class="odd">
+<td>Disque</td>
+<td>randwrite 4k QD1</td>
+<td>19 200 IOPS · 74,9 MiB/s</td>
+<td>Bon (write cache)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Micro-benchmark de calcul brut</strong> <em>(archive —
+<code>demo_benchmark_20260619/bench_raw.txt</code>)</em> : <strong>7 239
+→ 91 942 ops</strong> en <strong>3,43 s</strong> (facteur ~12,7× de
+speedup mesuré sur le run de démo).</p>
+<hr />
+<h2 id="jarvis-os-vs-freelance-livrable-réel-chronométré">6. JARVIS OS
+vs freelance — livrable réel chronométré</h2>
+<p><em>(archive — mesuré 2026-06-09,
+<code>benchmark_freelance/BENCHMARK_FREELANCE.md</code>)</em> Cas
+reproductible : scraper Python « catalogue → CSV » (livrable
+Fiverr/Upwork standard).</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Critère</th>
+<th>Freelance classique</th>
+<th><strong>JARVIS OS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Temps (demande → livrable)</td>
+<td>~2 h de travail · livraison 1–2 j</td>
+<td><strong>36 secondes</strong></td>
+</tr>
+<tr class="even">
+<td>Coût</td>
+<td>25–60 $</td>
+<td><strong>0 €</strong> (local, 0 token cloud)</td>
+</tr>
+<tr class="odd">
+<td>Qualité</td>
+<td>variable, JS souvent raté</td>
+<td><strong>1000/1000 lignes</strong>, 4 champs complets, CSV
+valide</td>
+</tr>
+<tr class="even">
+<td>Confidentialité</td>
+<td>données chez le freelance</td>
+<td>100 % on-premise</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="synthèse-les-chiffres-qui-comptent">Synthèse — les chiffres qui
+comptent</h2>
+<ul>
+<li><strong>99,6 %</strong> de succès de routage sur <strong>4 413
+appels</strong> LLM réels, tentatives moyennes
+<strong>0,26</strong>.</li>
+<li><strong>91,8 % du trafic LLM reste sur M1 local</strong> (98,6 %
+local total), <strong>&lt; 1 % cloud gratuit, 0 token
+payant</strong>.</li>
+<li>Réponse interactive médiane <strong>~1,1 s</strong> ; meilleur débit
+<strong>51 tok/s</strong> (cloud gratuit).</li>
+<li>Interprète vocal local : <strong>WER 10,51 %</strong>, <strong>20,2×
+temps réel</strong>, sur ~<strong>1 % d’un petaFLOP</strong> — <strong>0
+€</strong> vs <strong>1 440–2 500 $/an</strong> cloud.</li>
+<li>RAM <strong>108 GB/s</strong>, ZRAM <strong>3,07:1</strong>, CPU
+<strong>14 560 ev/s</strong> (16T) — machine saine sous charge.</li>
+<li>Livrable freelance standard : <strong>36 s / 0 €</strong> au lieu de
+1–2 jours / 25–60 $.</li>
+</ul>
+<h1 id="hardware-bios-couche-système">3. Hardware, BIOS &amp; couche
+système</h1>
+<h2 id="optimisations-hardware-bios-couche-système-jarvis-os-m1">03 ·
+Optimisations Hardware, BIOS &amp; Couche Système — JARVIS OS (M1)</h2>
+<blockquote>
+<p>Données relevées en direct sur M1 le 2026-07-17. Toutes les valeurs
+proviennent de <code>/proc</code>, <code>/sys</code>,
+<code>nvidia-smi</code>, <code>zramctl</code>, <code>free</code>. “Linux
+de base” = comportement par défaut Ubuntu 22/24 LTS sans
+modification.</p>
+</blockquote>
+<hr />
+<h2 id="cpu-amd-ryzen-7-5700x3d">1. CPU — AMD Ryzen 7 5700X3D</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Paramètre</th>
+<th>Linux de base</th>
+<th>JARVIS M1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Modèle</td>
+<td>AMD Ryzen 7 5700X3D 8C/16T</td>
+<td>idem</td>
+</tr>
+<tr class="even">
+<td>Cache L3</td>
+<td>96 MiB V-Cache (3D)</td>
+<td>96 MiB V-Cache</td>
+</tr>
+<tr class="odd">
+<td>Fréquence max</td>
+<td>4149 MHz (boost auto)</td>
+<td>4149 MHz confirmée</td>
+</tr>
+<tr class="even">
+<td>Fréquence min</td>
+<td>550 MHz (idle C-state)</td>
+<td>550 MHz</td>
+</tr>
+<tr class="odd">
+<td>Fréquence courante (relevée)</td>
+<td>variable / schedutil</td>
+<td><strong>4026 MHz</strong> (governor performance)</td>
+</tr>
+<tr class="even">
+<td>Governor CPU</td>
+<td><code>schedutil</code> (Ubuntu)</td>
+<td><strong><code>performance</code></strong> — boost constant, pas de
+latence de remontée</td>
+</tr>
+<tr class="odd">
+<td>Driver P-state</td>
+<td><code>acpi-cpufreq</code></td>
+<td><strong><code>amd_pstate=active</code></strong> — interface native
+AMD (Collaborative P-State Control)</td>
+</tr>
+<tr class="even">
+<td>Preferred Core</td>
+<td>désactivé</td>
+<td><strong><code>amd_prefcore=1</code></strong> — scheduler noyau
+redirige vers le cœur le plus rapide</td>
+</tr>
+<tr class="odd">
+<td>BogoMIPS</td>
+<td>—</td>
+<td>5999</td>
+</tr>
+<tr class="even">
+<td>Virtualisation</td>
+<td>AMD-V activé</td>
+<td>AMD-V actif</td>
+</tr>
+<tr class="odd">
+<td>Instructions SIMD</td>
+<td>SSE4.2, AVX2, FMA, AES-NI, SHA</td>
+<td>idem — accélération crypto/ML native</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Impact mesuré (bench 2026-07-16) :</strong> 14 560
+événements/s multi-thread, 1 802 ev/s single (charge concurrente ~7),
+rapport HT réel 8,08x (attendu pour SMT Zen3).</p>
+<hr />
+<h2 id="paramètres-bios-boot-kernel">2. Paramètres BIOS / Boot
+Kernel</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Paramètre cmdline</th>
+<th>Valeur</th>
+<th>Effet</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>amd_pstate=active</code></td>
+<td>actif</td>
+<td>Interface CPPC native AMD — P-states fins, latence plus basse que
+acpi-cpufreq</td>
+</tr>
+<tr class="even">
+<td><code>amd_prefcore=1</code></td>
+<td>actif</td>
+<td>Preferred Core : boost prioritaire sur le cœur champion</td>
+</tr>
+<tr class="odd">
+<td><code>pcie_aspm=off</code></td>
+<td><strong>désactivé</strong></td>
+<td>Suppression ASPM PCIe (économie d’énergie PCIe) — <strong>fix crash
+multi-GPU</strong> (hang modeset + watchdog reboot boucle sur
+ASMedia)</td>
+</tr>
+<tr class="even">
+<td><code>mitigations=off</code></td>
+<td>actif</td>
+<td>Désactivation Spectre/Meltdown/MDS — +5-15% CPU sur workloads
+syscall-intensifs</td>
+</tr>
+<tr class="odd">
+<td><code>transparent_hugepage=always</code></td>
+<td>always</td>
+<td>THP activé globalement (2 MiB pages) — réduit la pression TLB sur
+gros workloads LLM</td>
+</tr>
+<tr class="even">
+<td><code>loglevel=0</code></td>
+<td>0</td>
+<td>Pas de bruit kernel sur console</td>
+</tr>
+<tr class="odd">
+<td><code>logo.nologo</code></td>
+<td>actif</td>
+<td>Boot silencieux</td>
+</tr>
+</tbody>
+</table>
+<p>Noyau actif : <strong>Linux 6.8.0-117-generic</strong>
+<code>PREEMPT_DYNAMIC</code> (Ubuntu SMP, 2026-05-05).</p>
+<hr />
+<h2 id="zram-swap-compressé-en-ram">3. ZRAM — Swap compressé en RAM</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Paramètre</th>
+<th>Linux de base</th>
+<th>JARVIS M1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ZRAM activé</td>
+<td>non</td>
+<td><strong>oui</strong> — <code>/dev/zram0</code></td>
+</tr>
+<tr class="even">
+<td>Taille brute</td>
+<td>—</td>
+<td><strong>24 GiB</strong></td>
+</tr>
+<tr class="odd">
+<td>Algorithme</td>
+<td>—</td>
+<td><strong>zstd</strong> (meilleur ratio, CPU moderne)</td>
+</tr>
+<tr class="even">
+<td>Threads</td>
+<td>—</td>
+<td>16 (= nb de vCPU)</td>
+</tr>
+<tr class="odd">
+<td>Priorité swap</td>
+<td>—</td>
+<td><strong>100</strong> (priorité maximale, avant tout swap
+disque)</td>
+</tr>
+<tr class="even">
+<td>Ratio compression mesuré</td>
+<td>—</td>
+<td><strong>3,07:1</strong> (6,36 GiB données → 2,07 GiB compressés,
+relevé sous charge)</td>
+</tr>
+<tr class="odd">
+<td>Swap physique (dm-0)</td>
+<td>swap unique</td>
+<td>16 GiB, priorité 10 (dernier recours)</td>
+</tr>
+<tr class="even">
+<td>Swappiness</td>
+<td>60 (Ubuntu)</td>
+<td><strong>10</strong> — préférence forte pour garder en RAM</td>
+</tr>
+<tr class="odd">
+<td>Zero-pages ZRAM</td>
+<td>—</td>
+<td>97 236 pages (économie supplémentaire)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Capacité totale swap :</strong> 39 GiB (24 GiB ZRAM + 16 GiB
+dm-0). <strong>État sous charge :</strong> swap-in quasi nul, ZRAM sert
+de coussin élastique sans latence disque. Aucun OOM observé sur 46 GiB
+RAM totale.</p>
+<hr />
+<h2 id="ram-mémoire">4. RAM &amp; Mémoire</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Métrique</th>
+<th>Valeur relevée</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RAM totale</td>
+<td><strong>46 GiB</strong> (49 244 780 kB)</td>
+</tr>
+<tr class="even">
+<td>RAM disponible (relevé live)</td>
+<td>18 GiB (19 703 020 kB)</td>
+</tr>
+<tr class="odd">
+<td>RAM utilisée (live)</td>
+<td>28 GiB (charge complète : LLM + Docker + OS)</td>
+</tr>
+<tr class="even">
+<td>Cache/tampon noyau</td>
+<td>21 GiB</td>
+</tr>
+<tr class="odd">
+<td>HugePages (statiques 2 MiB)</td>
+<td><strong>512 pages = 1 GiB</strong> réservé (496 libres, 16 en
+usage)</td>
+</tr>
+<tr class="even">
+<td>AnonHugePages (THP dynamiques)</td>
+<td><strong>11 315 200 kB ≈ 10,8 GiB</strong> alloués par
+THP=always</td>
+</tr>
+<tr class="odd">
+<td>vfs_cache_pressure</td>
+<td><strong>50</strong> (Ubuntu=100) — noyau conserve plus longtemps le
+cache VFS</td>
+</tr>
+<tr class="even">
+<td>dirty_ratio</td>
+<td><strong>20</strong> (défaut Ubuntu)</td>
+</tr>
+<tr class="odd">
+<td>dirty_background_ratio</td>
+<td><strong>5</strong></td>
+</tr>
+<tr class="even">
+<td>dirty_writeback_centisecs</td>
+<td><strong>500</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Débit RAM mesuré (sysbench) :</strong> 107 954 MiB/s
+séquentiel 8 threads. Plancher DRAM hors L3 (STREAM dataset &gt; 96 MiB
+V-Cache) : ~15,4 GB/s — correspond aux 2 canaux DDR4.</p>
+<hr />
+<h2 id="io-scheduler-disque">5. I/O — Scheduler disque</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Disque</th>
+<th>Type</th>
+<th>Scheduler</th>
+<th>Linux de base</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>sda</code></td>
+<td>HDD/SSD SATA</td>
+<td><strong><code>none</code></strong> (passthrough)</td>
+<td><code>mq-deadline</code></td>
+</tr>
+<tr class="even">
+<td><code>sdb</code></td>
+<td>HDD/SSD SATA</td>
+<td><strong><code>none</code></strong></td>
+<td><code>mq-deadline</code></td>
+</tr>
+<tr class="odd">
+<td><code>sdc</code></td>
+<td>HDD/SSD SATA</td>
+<td><strong><code>none</code></strong></td>
+<td><code>mq-deadline</code></td>
+</tr>
+<tr class="even">
+<td><code>sdd</code></td>
+<td>HDD/SSD SATA</td>
+<td><strong><code>none</code></strong></td>
+<td><code>mq-deadline</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>none</code></strong> = pas d’ordonnancement
+supplémentaire dans le noyau, confiance au driver de bas niveau
+(optionnel moderne pour NVMe/SATA rapide). <code>mq-deadline</code>
+reste disponible dans la liste mais non sélectionné.</p>
+<p><strong>Bench disque mesuré :</strong> randread 4K QD1 = 8 730 IOPS
+(34,1 MiB/s) · randwrite 4K QD1 = 19 200 IOPS (74,9 MiB/s).</p>
+<hr />
+<h2 id="hugepages-thp">6. Hugepages &amp; THP</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Paramètre</th>
+<th>Linux de base</th>
+<th>JARVIS M1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>transparent_hugepage</code></td>
+<td><code>madvise</code> (Ubuntu)</td>
+<td><strong><code>always</code></strong> (cmdline boot)</td>
+</tr>
+<tr class="even">
+<td>HugePages statiques (2 MiB)</td>
+<td>0</td>
+<td><strong>512 pages (1 GiB)</strong> pré-réservé</td>
+</tr>
+<tr class="odd">
+<td>AnonHugePages dynamiques</td>
+<td>faible</td>
+<td><strong>10,8 GiB</strong> alloués (THP kernel actif)</td>
+</tr>
+</tbody>
+</table>
+<p>THP <code>always</code> permet au noyau de mapper automatiquement les
+grandes zones mémoire en pages 2 MiB, réduisant la charge TLB pour les
+workloads LLM (modèles &gt;4 GiB chargés en continu).</p>
+<hr />
+<h2 id="gpu-topologie-power-management">7. GPU — Topologie &amp; Power
+Management</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Index CUDA</th>
+<th>Modèle</th>
+<th>VRAM</th>
+<th>Power Limit</th>
+<th>Défaut</th>
+<th>Rôle JARVIS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GPU 0</td>
+<td>RTX 2060</td>
+<td>12 288 MiB</td>
+<td><strong>150 W</strong></td>
+<td>184 W</td>
+<td>Affichage GNOME — <strong>exclu des LLM</strong></td>
+</tr>
+<tr class="even">
+<td>GPU 1</td>
+<td>GTX 1660 SUPER</td>
+<td>6 144 MiB</td>
+<td>70 W</td>
+<td>125 W</td>
+<td>Inférence</td>
+</tr>
+<tr class="odd">
+<td>GPU 2</td>
+<td>GTX 1660 SUPER</td>
+<td>6 144 MiB</td>
+<td>70 W</td>
+<td>125 W</td>
+<td>Inférence — <strong>ventilo défaillant (0% fan, 74°C au relevé,
+jusqu’à 88°C en pic sous charge), surveiller</strong></td>
+</tr>
+<tr class="even">
+<td>GPU 3</td>
+<td>GTX 1660 SUPER</td>
+<td>6 144 MiB</td>
+<td>70 W</td>
+<td>125 W</td>
+<td>Inférence</td>
+</tr>
+<tr class="odd">
+<td>GPU 4</td>
+<td>RTX 3080</td>
+<td>10 240 MiB GDDR6X</td>
+<td>230 W</td>
+<td>—</td>
+<td>LLM principal (poids lourds)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>VRAM totale disponible pour l’inférence (hors GPU0 affichage)
+:</strong> 28 672 MiB (28 GiB).</p>
+<h3 id="règles-de-protection-gpu-actives">Règles de protection GPU
+actives</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Règle</th>
+<th>Raison</th>
+<th>Fix appliqué</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GPU écran (RTX 2060) exclu des LLM</td>
+<td>Famine VRAM → hang modeset → watchdog reboot boucle</td>
+<td><code>disabledGpus:[1]</code> LM Studio +
+<code>CUDA_VISIBLE_DEVICES</code> remapping</td>
+</tr>
+<tr class="even">
+<td><code>pcie_aspm=off</code> en cmdline</td>
+<td>Crash multi-GPU sur bus ASMedia PCIe (ASPM économie d’énergie
+corrupteur)</td>
+<td>Paramètre boot permanent</td>
+</tr>
+<tr class="odd">
+<td>Module NVIDIA open + GSP désactivé</td>
+<td>Multi-crash GPU confirmé sur driver open + GSP activé</td>
+<td>Suppression <code>nvidia-gsp.conf</code></td>
+</tr>
+<tr class="even">
+<td>Power limit RTX 2060 : 150 W (vs 184 W défaut)</td>
+<td>Réduction chaleur GPU affichage, VRAM préservée pour OS</td>
+<td><code>nvidia-smi -pl 150</code></td>
+</tr>
+<tr class="odd">
+<td>GPU 2 (1660S) : ventilo défaillant</td>
+<td>Fan 0% — 74°C au relevé courant, pic mesuré ~88°C sous charge
+intensive — risque thermique</td>
+<td>Exclu des benchmarks intensifs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="températures-vram-live-relevé-2026-07-17">Températures &amp;
+VRAM live (relevé 2026-07-17)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>GPU</th>
+<th>Temp</th>
+<th>Fan</th>
+<th>VRAM utilisée</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GPU 0 RTX 2060 (écran)</td>
+<td>54°C</td>
+<td>46%</td>
+<td>4 114 / 12 288 MiB</td>
+</tr>
+<tr class="even">
+<td>GPU 1 GTX 1660S</td>
+<td>44°C</td>
+<td>0%</td>
+<td>972 / 6 144 MiB</td>
+</tr>
+<tr class="odd">
+<td>GPU 2 GTX 1660S</td>
+<td>74°C</td>
+<td><strong>0% (défaillant)</strong></td>
+<td>3 231 / 6 144 MiB</td>
+</tr>
+<tr class="even">
+<td>GPU 3 GTX 1660S</td>
+<td>44°C</td>
+<td>0%</td>
+<td>2 096 / 6 144 MiB</td>
+</tr>
+<tr class="odd">
+<td>GPU 4 RTX 3080</td>
+<td>72°C</td>
+<td>46%</td>
+<td>8 745 / 10 240 MiB</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="résumé-des-optimisations-linux-de-base-jarvis">8. Résumé des
+optimisations (Linux de base → JARVIS)</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Couche</th>
+<th>Linux de base</th>
+<th>JARVIS M1</th>
+<th>Gain</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CPU governor</td>
+<td><code>schedutil</code></td>
+<td><strong><code>performance</code></strong></td>
+<td>Latence remontée fréquence supprimée</td>
+</tr>
+<tr class="even">
+<td>AMD P-state</td>
+<td><code>acpi-cpufreq</code></td>
+<td><strong><code>amd_pstate=active</code></strong></td>
+<td>P-states fins natifs AMD</td>
+</tr>
+<tr class="odd">
+<td>Preferred Core</td>
+<td>off</td>
+<td><strong><code>amd_prefcore=1</code></strong></td>
+<td>Cœur champion priorisé</td>
+</tr>
+<tr class="even">
+<td>Mitigations CPU</td>
+<td>on</td>
+<td><strong>off</strong></td>
+<td>+5-15% sur syscall-bound</td>
+</tr>
+<tr class="odd">
+<td>PCIe ASPM</td>
+<td>on</td>
+<td><strong>off</strong></td>
+<td>Fix crash GPU multi-reboot</td>
+</tr>
+<tr class="even">
+<td>THP</td>
+<td><code>madvise</code></td>
+<td><strong><code>always</code></strong></td>
+<td>~10,8 GiB en huge pages, TLB réduit</td>
+</tr>
+<tr class="odd">
+<td>HugePages statiques</td>
+<td>0</td>
+<td><strong>512 × 2 MiB = 1 GiB</strong></td>
+<td>Réservation mémoire prévisible</td>
+</tr>
+<tr class="even">
+<td>ZRAM</td>
+<td>absent</td>
+<td><strong>24 GiB zstd prio=100</strong></td>
+<td>Swap sans latence disque, ratio 3:1</td>
+</tr>
+<tr class="odd">
+<td>Swappiness</td>
+<td>60</td>
+<td><strong>10</strong></td>
+<td>RAM préservée, swap dernier recours</td>
+</tr>
+<tr class="even">
+<td>vfs_cache_pressure</td>
+<td>100</td>
+<td><strong>50</strong></td>
+<td>Cache VFS retenu plus longtemps</td>
+</tr>
+<tr class="odd">
+<td>I/O scheduler</td>
+<td><code>mq-deadline</code></td>
+<td><strong><code>none</code></strong></td>
+<td>Passthrough driver, latence minimale</td>
+</tr>
+<tr class="even">
+<td>Driver NVIDIA</td>
+<td>open + GSP</td>
+<td><strong>GSP désactivé</strong></td>
+<td>Fix crash multi-GPU</td>
+</tr>
+<tr class="odd">
+<td>LLM sur GPU écran</td>
+<td>possible</td>
+<td><strong>interdit</strong> (règle config)</td>
+<td>Famine VRAM → reboot évitée</td>
+</tr>
+</tbody>
+</table>
+<h1 id="widget-bureau-ce-que-le-système-fait">4. Widget bureau « Ce que
+le système fait »</h1>
+<h2 id="le-widget-bureau-ce-que-le-système-fait-présentation-utilisation">Le
+widget bureau « Ce que le système fait » — présentation &amp;
+utilisation</h2>
+<h3 id="vision">Vision</h3>
+<p>Un <strong>tableau de bord de bureau temps réel, zéro token</strong>,
+qui répond à une seule question : <em>« qu’est-ce que JARVIS est en
+train de faire, là, maintenant ? »</em>. Il ne consomme aucun crédit LLM
+: il <strong>lit directement</strong> l’état de la machine (bases
+SQLite, logs, <code>nvidia-smi</code>, <code>systemctl</code>) et
+l’affiche en continu.</p>
+<h3 id="architecture-technique">Architecture technique</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Composant</th>
+<th>Rôle</th>
+<th>Détail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Backend</strong>
+<code>bin/jarvis-planning-widget.py</code></td>
+<td>Serveur HTTP stdlib, port <strong>8899</strong></td>
+<td>sert <code>/</code> (dashboard HTML auto-refresh) +
+<code>/data</code> (JSON) + <code>POST /trigger</code></td>
+</tr>
+<tr class="even">
+<td><strong>Fenêtre</strong>
+<code>bin/jarvis-widget-desktop.py</code></td>
+<td>Vue WebKitGTK sans bordure, <code>keep_below</code></td>
+<td>pompe le rafraîchissement depuis Python (GLib)</td>
+</tr>
+<tr class="odd">
+<td><strong>Supervision</strong></td>
+<td>2 services systemd <code>--user</code></td>
+<td><code>Restart=always</code> → relance &lt; 5 s après un
+kill/crash</td>
+</tr>
+</tbody>
+</table>
+<p>Le rafraîchissement est <strong>piloté côté Python</strong> et non
+par le JavaScript de la page : WebKit gèle <code>setInterval</code> pour
+les fenêtres en arrière-plan (<code>keep_below</code>), donc
+<code>GLib.timeout_add_seconds</code> pompe
+<code>tick()</code>/<code>cdTick()</code> pour garder le compte à
+rebours et les données vivants en permanence.</p>
+<h3 id="les-5-panneaux-lecture-seule-0-token">Les 5 panneaux (lecture
+seule, 0-token)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Panneau</th>
+<th>Source</th>
+<th>Ce qu’il montre</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>File de tâches</strong></td>
+<td><code>jarvis_master.db</code></td>
+<td>en file / faites / analysées</td>
+</tr>
+<tr class="even">
+<td><strong>Routage LLM</strong></td>
+<td><code>llm_cascade_log.jsonl</code></td>
+<td>canaux de sortie, % fallback (fenêtre courte n=60)</td>
+</tr>
+<tr class="odd">
+<td><strong>Workflows n8n</strong></td>
+<td><code>~/.n8n/database.sqlite</code></td>
+<td>workflows auto-déclenchés, ok/ko 24 h</td>
+</tr>
+<tr class="even">
+<td><strong>GPU thermique</strong></td>
+<td><code>nvidia-smi</code></td>
+<td>température, ventilateur, charge des 5 GPU</td>
+</tr>
+<tr class="odd">
+<td><strong>Timers planifiés</strong></td>
+<td><code>systemctl --user list-timers</code></td>
+<td>prochaines échéances + compte à rebours</td>
+</tr>
+</tbody>
+</table>
+<h3 id="compte-à-rebours-auto-déclencheur">Compte à rebours &amp;
+auto-déclencheur</h3>
+<p>En haut du widget, un <strong>compte à rebours</strong> indique le
+<strong>prochain auto-déclenchement</strong> (ex.
+<code>jarvis-hub-healthcheck</code> dans 3 s). C’est la preuve visuelle
+que le système s’anime tout seul : timers systemd → actions → mise à
+jour du dashboard.</p>
+<h3 id="boutons-daction-post-trigger-durci">Boutons d’action (POST
+/trigger, durci)</h3>
+<p>Le widget n’est pas que passif : une <strong>barre d’actions</strong>
+déclenche des services via <code>POST /trigger</code>, protégé par une
+<strong>liste blanche</strong> + anti-CSRF / anti-DNS-rebind (seule la
+page servie depuis <code>127.0.0.1:&lt;port&gt;</code> peut déclencher ;
+toute <code>Origin</code> cross-site ou <code>Host</code> non-loopback →
+<strong>403</strong>).</p>
+<table>
+<thead>
+<tr class="header">
+<th>Bouton</th>
+<th>Action déclenchée</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>▶ exécuter file</td>
+<td>traite la file de tâches en attente</td>
+</tr>
+<tr class="even">
+<td>▶ régénérer todo</td>
+<td>reconstruit la todoliste dynamique</td>
+</tr>
+<tr class="odd">
+<td>▶ remplir biblio</td>
+<td>relance le daemon Bibliothèque Vivante (0-token)</td>
+</tr>
+<tr class="even">
+<td>▶ web-cascade</td>
+<td>construction web réelle (anti-hallucination)</td>
+</tr>
+<tr class="odd">
+<td>▶ vectoriser</td>
+<td>indexation vectorielle des fiches</td>
+</tr>
+<tr class="even">
+<td>✉ envoyer lot (40)</td>
+<td>envoi du lot de prospection courant</td>
+</tr>
+<tr class="odd">
+<td>📊 snapshot campagne</td>
+<td>capture l’état d’une campagne</td>
+</tr>
+<tr class="even">
+<td>📈 secteurs demande</td>
+<td>agrège la demande par secteur</td>
+</tr>
+</tbody>
+</table>
+<h3 id="indicateurs-clés-kpi-exemple-live">Indicateurs clés (KPI,
+exemple live)</h3>
+<p><code>39 en file</code> · <code>181 faites</code> ·
+<code>38 analysées</code> · <code>200 fiches produites</code> ·
+<code>44 timers actifs</code> — GPU <code>44–66 °C</code> · routage
+<code>fallback 2 %</code> (sain).</p>
+<h3 id="utilisation-au-quotidien">Utilisation au quotidien</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">## État des deux services (prod)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> status jarvis-planning-widget.service   <span class="co"># backend :8899</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> status jarvis-widget-desktop.service    <span class="co"># fenêtre bureau</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">## Après édition du backend Python</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> restart jarvis-planning-widget.service</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">## Après édition du HTML/JS du dashboard (la fenêtre cache l&#39;ancien HTML)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> restart jarvis-widget-desktop.service</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">## Consulter les données brutes en JSON</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-s</span> http://127.0.0.1:8899/data <span class="kw">|</span> <span class="ex">python3</span> <span class="at">-m</span> json.tool</span></code></pre></div>
+<p><strong>Débloquer un flapping</strong> (après plusieurs restarts
+rapides, <code>start-limit-hit</code>) :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> reset-failed jarvis-planning-widget.service</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> start jarvis-planning-widget.service</span></code></pre></div>
+<h3 id="robustesse-pourquoi-il-ne-disparaît-plus">Robustesse — pourquoi
+il ne « disparaît » plus</h3>
+<p>Auparavant la fenêtre était un simple autostart GNOME <strong>sans
+superviseur</strong> : un kill la faisait disparaître jusqu’au prochain
+login. Elle est désormais un <strong>service systemd supervisé</strong>
+(<code>Restart=always</code>) ; l’autostart a été neutralisé
+(<code>.desktop.disabled</code>) pour éviter le double lancement. Les
+panneaux se <strong>dégradent proprement</strong> (vides) si une source
+manque (<code>nvidia-smi</code> absent, base n8n verrouillée) — jamais
+de crash.</p>
+<h3 id="démonstration-vidéo-narrée">Démonstration vidéo narrée</h3>
+<p>Une capture d’écran vidéo <strong>narrée</strong> (voix off
+française, edge-tts) accompagne ce pack :
+<code>demo/demo-widget-jarvis-*.mp4</code> — elle montre le widget en
+fonctionnement réel avec le compte à rebours vivant, les KPI, le
+thermique GPU et les tâches planifiées.</p>
+<h1 id="écosystème-dagents">5. Écosystème d’agents</h1>
+<h2 id="écosystème-dagents-le-décompte-réel">Écosystème d’agents — le
+décompte réel</h2>
+<p>Le chiffre « <strong>mille agents</strong> » n’est pas un slogan :
+c’est l’<strong>arrondi de 961 agents réellement indexés</strong>. Voici
+la preuve, source par source, avec trois décomptes concordants et
+vérifiables.</p>
+<h2 id="décompte-1-index-cowork-le-1000">Décompte 1 — Index cowork (le «
+1000 »)</h2>
+<p><code>~/.claude/plugins/jarvis-cowork/agent-index.json</code> :
+<strong>961 agents</strong> indexés (scripts spécialisés, chacun avec
+<code>source</code> / <code>path</code> / <code>desc</code>).</p>
+<table>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Agents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>services</td>
+<td>848</td>
+</tr>
+<tr class="even">
+<td>infra-scripts</td>
+<td>82</td>
+</tr>
+<tr class="odd">
+<td>jarvis-core</td>
+<td>28</td>
+</tr>
+<tr class="even">
+<td>workers</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td><strong>961</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="décompte-2-comptage-entreprise-toutes-couches-1-354">Décompte 2
+— Comptage entreprise toutes couches (1 354)</h2>
+<p><code>jarvis-core/docs/agent-entreprise/comptage-final.md</code>
+(source vérifiée 2026-06-18) — consolide <strong>toutes</strong> les
+couches d’agents :</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Couche</th>
+<th>Source</th>
+<th>Nb réel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Index cowork</td>
+<td><code>jarvis-cowork/agent-index.json</code></td>
+<td>961</td>
+</tr>
+<tr class="even">
+<td>Agents Claude natifs (<code>.md</code> stricts)</td>
+<td><code>.claude/agents/*.md</code></td>
+<td>58</td>
+</tr>
+<tr class="odd">
+<td>Agents plugins (jarvis-os / turbo / cowork)</td>
+<td><code>.claude/plugins/</code></td>
+<td>71</td>
+</tr>
+<tr class="even">
+<td>Skills-agents</td>
+<td><code>.claude/skills/</code> (SKILL.md)</td>
+<td>169</td>
+</tr>
+<tr class="odd">
+<td>Actions OpenClaw</td>
+<td>API M5:8400</td>
+<td>95</td>
+</tr>
+<tr class="even">
+<td><strong>TOTAL</strong></td>
+<td>—</td>
+<td><strong>1 354</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="décompte-3-inventaire-omega-1-435-11-catégories">Décompte 3 —
+Inventaire OMEGA (1 435, 11 catégories)</h2>
+<p><code>inventaire-complet-1435-agents.md</code> (horodaté 2026-03-29)
+— le décompte le plus large, incluant les Legions et les chaînes Domino
+:</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Catégorie</th>
+<th>Quantité</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Legions</td>
+<td>600 (10×60)</td>
+<td><code>openclaw-master.py</code></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Cowork Scripts</td>
+<td>579</td>
+<td><code>modules/cowork/</code></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Skills Gemini CLI</td>
+<td>85</td>
+<td><code>~/.gemini/skills/</code></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Domino Chains</td>
+<td>71</td>
+<td><code>core/domino/chains.d/</code></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Agents SQL Registry</td>
+<td>38</td>
+<td><code>jarvis_orchestrator.db</code></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>CLIs système</td>
+<td>18</td>
+<td><code>/usr/local/bin/</code></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Agents Core Python</td>
+<td>14</td>
+<td><code>core/agents/*.py</code></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Agent Modules</td>
+<td>13</td>
+<td><code>core/agent_modules/*.py</code></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>OpenClaw Skills</td>
+<td>11 (46 cmds)</td>
+<td><code>openclaw/skills/</code></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Omega Master Agents</td>
+<td>6</td>
+<td><code>~/.claude/agents/</code> (sous-ensemble des 58
+<code>.md</code>)</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>(divers)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><strong>TOTAL</strong></td>
+<td></td>
+<td><strong>1 435</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="synthèse-comment-présenter-le-chiffre">Synthèse — comment
+présenter le chiffre</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Formulation</th>
+<th>Chiffre</th>
+<th>Quand l’utiliser</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>« près de mille agents indexés »</strong></td>
+<td>961</td>
+<td>affirmation forte et vérifiable en une commande</td>
+</tr>
+<tr class="even">
+<td><strong>« plus de 1 350 agents toutes couches »</strong></td>
+<td>1 354</td>
+<td>décompte entreprise consolidé (2026-06-18)</td>
+</tr>
+<tr class="odd">
+<td><strong>« jusqu’à 1 435 composants actifs »</strong></td>
+<td>1 435</td>
+<td>inventaire OMEGA complet (Legions incluses)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Un agent, ici, = un composant exécutable spécialisé (script de
+service, skill, chaîne Domino, action OpenClaw, ou agent Claude natif),
+routé par le hub et pilotable par la voix. Les <strong>129 agents Claude
+Code</strong> natifs n’en sont que la façade la plus visible.</p>
+<p><strong>Réconciliation du « 129 ».</strong> Ce chiffre = agents
+Claude Code chargés en session sur M1 (agents natifs <strong>+</strong>
+plugins jarvis-os / turbo / cowork). Il ne faut pas le confondre avec :
+les <strong>58</strong> fichiers <code>.md</code> natifs stricts de
+<code>.claude/agents/</code> (retenus tels quels dans le total
+entreprise 1 354, décompte 2 ci-dessus), ni avec les <strong>6</strong>
+« Omega Master Agents » de <code>~/.claude/agents/</code> comptés dans
+l’inventaire OMEGA (décompte 3, catégorie 10). Trois périmètres
+emboîtés, pas trois valeurs concurrentes : 6 ⊂ 58 ⊂ 129. Les totaux
+headline restent <strong>961</strong> indexés · <strong>1 354</strong>
+toutes couches · <strong>1 435</strong> OMEGA.</p>
+</blockquote>
+<p>Infrastructure de support : <strong>26 containers Docker</strong>
+actifs répartis M1/M2/M5, <strong>2 533 scripts Python</strong>
+(jarvis-linux) + <strong>618 scripts cowork</strong>.</p>
+<h1 id="démonstration-vidéo">6. Démonstration vidéo</h1>
+<p>Une capture d’écran <strong>vidéo narrée</strong> (voix off
+française) accompagne ce dossier :</p>
+<pre><code>demo/demo-widget-jarvis-20260717-003517.mp4
+demo/demo-widget-jarvis-20260717-003645.mp4
+demo/demo-widget-jarvis-20260717-005750.mp4</code></pre>
+<p>Elle montre le widget en fonctionnement réel — compte à rebours
+vivant, KPI, thermique GPU, tâches planifiées — avec une narration
+décrivant JARVIS OS, ses performances et ses différences face à un Linux
+de base.</p>
+</body>
+</html>

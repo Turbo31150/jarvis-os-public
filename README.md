@@ -240,14 +240,36 @@ make install               # Détection matériel + activation agents
 
 ## Présentation & Démo
 
-Le dossier [`demo/`](demo/) rassemble les **livrables de présentation** (captures réelles de
-production, en local) : report de présentation (Markdown / PDF / HTML), documentation du pipeline
-vidéo, et script de narration.
+Le dossier [`demo/`](demo/) rassemble le **dossier de présentation professionnel complet** —
+captures réelles de production, en local, zéro cloud. Voir l'[**index complet des livrables**](demo/).
 
-- 📊 [Rapport visuel — Audit &amp; Benchmarks](demo/rapport-visuel.html) — graphiques (fiabilité, agents, thermique GPU, audit de cohérence)
-- 📄 [Report de présentation](demo/REPORT_PRESENTATION.md) — registre à jour de tous les livrables + chiffres d'agents vérifiés
-- 🎬 [Pipeline vidéo](demo/PIPELINE-DEMO-VIDEO.html) — flux, skill, scripts, artefacts
-- 🗣️ [Narration](demo/narration-scene-complete.txt) — voix off française (edge-tts)
+### ⚡ Actions rapides
+
+| Je veux… | Ouvrir |
+|---|---|
+| 📊 **Voir les graphiques** (audit + benchmarks) | [`demo/rapport-visuel.html`](demo/rapport-visuel.html) |
+| 📕 **Lire le dossier complet** (6 sections) | [`demo/pack/PACK_PRESENTATION.pdf`](demo/pack/PACK_PRESENTATION.pdf) |
+| 🔍 **Vérifier les chiffres** (traçabilité) | [`demo/pack/AUDIT_COHERENCE.pdf`](demo/pack/AUDIT_COHERENCE.pdf) |
+| 🎬 **Pipeline vidéo** (flux, skill, scripts) | [`demo/PIPELINE-DEMO-VIDEO.html`](demo/PIPELINE-DEMO-VIDEO.html) |
+| 🎞️ **Storyboard** (Linux → aujourd'hui) | [`demo/pack/STORYBOARD-COMPLET.pdf`](demo/pack/STORYBOARD-COMPLET.pdf) |
+| 📣 **Distribuer / publier** (formats réseaux) | [`demo/pack/DISTRIBUTION-MONTAGE-IA.pdf`](demo/pack/DISTRIBUTION-MONTAGE-IA.pdf) |
+| 🗣️ **Script de narration** | [`demo/narration-scene-complete.txt`](demo/narration-scene-complete.txt) |
+
+### Chiffres vérifiés (banc interne complet)
+
+Triade d'agents emboîtée **961 / 1 354 / 1 435** · Benchmarks constants : **4 413** appels ·
+**99,6 %** succès · **~1,1 s** latence médiane · **51 tok/s** · WER **10,51 %**.
+Traçabilité complète dans l'[audit de cohérence](demo/pack/AUDIT_COHERENCE.pdf).
+
+---
+
+## Utilisation & Normes
+
+- **Zero-Cloud** — toutes les communications inter-nœuds transitent par `127.0.0.1`, aucune donnée ne quitte le parc.
+- **RGPD natif** — hébergement on-premise, souveraineté totale des données, zéro sous-traitant cloud.
+- **Licence MIT** — code réutilisable librement, voir [LICENSE](LICENSE).
+- **Reproductibilité** — chiffres figés sur le décompte vérifié, chaque total traçable en une commande (cf. audit).
+- **0 jeton facturé** — modèles locaux (qwen3.5-9b via LM Studio) + cascade de secours gratuite.
 
 ---
 
